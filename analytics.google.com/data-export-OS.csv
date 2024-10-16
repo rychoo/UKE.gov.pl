@@ -1,0 +1,331 @@
+# ----------------------------------------
+# Wyeksportowany raport w formacie CSV
+# Konto: RYCHoo
+# Usługa: RYCHoo.TheUnixPlace.com
+# ----------------------------------------
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Platforma,Aktywni użytkownicy
+"[""Internet""]",917
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+System operacyjny,Aktywni użytkownicy
+iOS,436
+Android,233
+Windows,200
+Linux,31
+Macintosh,14
+Chrome OS,6
+FreeBSD,1
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+System operacyjny,Aktywni użytkownicy
+iOS,6
+Android,17
+Windows,11
+Linux,1
+Macintosh,0
+Chrome OS,1
+FreeBSD,0
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Kategoria platformy lub urządzenia,Aktywni użytkownicy
+web / mobile,621
+web / desktop,251
+web / tablet,47
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Kategoria platformy lub urządzenia,Aktywni użytkownicy
+web / mobile,23
+web / desktop,13
+web / tablet,0
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Przeglądarka,Aktywni użytkownicy
+Safari (in-app),230
+Android Webview,210
+Safari,210
+Chrome,187
+Edge,41
+Firefox,39
+Opera,2
+Samsung Internet,1
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Przeglądarka,Aktywni użytkownicy
+Safari (in-app),6
+Android Webview,10
+Safari,0
+Chrome,14
+Edge,2
+Firefox,1
+Opera,2
+Samsung Internet,1
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Kategoria urządzenia,Aktywni użytkownicy
+mobile,621
+desktop,251
+tablet,47
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Kategoria urządzenia,Aktywni użytkownicy
+mobile,23
+desktop,13
+tablet,0
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Rozdzielczość ekranu,Aktywni użytkownicy
+414x896,133
+390x844,105
+1280x960,57
+375x812,45
+360x800,40
+1920x1080,36
+800x600,39
+375x667,35
+428x926,33
+1280x800,21
+1024x768,16
+1536x864,19
+810x1080,19
+412x915,15
+414x736,17
+384x857,15
+360x780,15
+1024x1024,12
+1280x720,13
+360x770,13
+393x852,12
+1600x900,11
+1360x1020,9
+360x640,8
+360x740,8
+320x570,8
+393x873,6
+430x932,8
+360x720,7
+384x854,7
+360x760,6
+360x771,6
+393x851,4
+768x1024,6
+834x1194,6
+1366x768,4
+1400x600,5
+385x854,5
+800x450,5
+320x568,4
+320x640,4
+320x694,3
+360x792,4
+412x846,3
+412x892,3
+820x1180,4
+1440x900,3
+320x712,3
+360x796,3
+384x832,2
+412x869,3
+412x918,3
+432x960,3
+1024x1366,2
+1400x700,2
+1536x960,2
+2796x1290,2
+320x693,2
+3440x1440,2
+360x806,2
+360x820,2
+384x768,2
+384x824,2
+412x823,2
+424x906,2
+424x918,2
+800x1280,2
+1000x600,1
+1200x600,1
+1280x3000,1
+1512x982,1
+1616x1010,1
+1680x1050,1
+1807x1129,1
+285x633,1
+320x685,1
+320x708,1
+345x883,1
+360x747,1
+360x803,1
+360x825,0
+377x753,1
+377x837,0
+3840x2160,1
+384x939,1
+390x664,1
+424x895,1
+424x907,0
+424x942,1
+437x972,1
+485x1076,1
+600x1024,1
+601x962,1
+744x1133,1
+800x1334,1
+834x1112,1
+915x412,1
+960x540,1
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Rozdzielczość ekranu,Aktywni użytkownicy
+414x896,1
+390x844,3
+1280x960,1
+375x812,0
+360x800,1
+1920x1080,4
+800x600,0
+375x667,0
+428x926,1
+1280x800,1
+1024x768,3
+1536x864,0
+810x1080,0
+412x915,2
+414x736,0
+384x857,1
+360x780,0
+1024x1024,2
+1280x720,1
+360x770,0
+393x852,1
+1600x900,0
+1360x1020,1
+360x640,1
+360x740,1
+320x570,0
+393x873,2
+430x932,0
+360x720,0
+384x854,0
+360x760,0
+360x771,0
+393x851,2
+768x1024,0
+834x1194,0
+1366x768,1
+1400x600,0
+385x854,0
+800x450,0
+320x568,0
+320x640,0
+320x694,1
+360x792,0
+412x846,1
+412x892,1
+820x1180,0
+1440x900,0
+320x712,0
+360x796,0
+384x832,1
+412x869,0
+412x918,0
+432x960,0
+1024x1366,0
+1400x700,0
+1536x960,0
+2796x1290,0
+320x693,0
+3440x1440,0
+360x806,0
+360x820,0
+384x768,0
+384x824,0
+412x823,0
+424x906,0
+424x918,0
+800x1280,0
+1000x600,0
+1200x600,0
+1280x3000,0
+1512x982,0
+1616x1010,0
+1680x1050,0
+1807x1129,0
+285x633,0
+320x685,0
+320x708,0
+345x883,0
+360x747,0
+360x803,0
+360x825,1
+377x753,0
+377x837,1
+3840x2160,0
+384x939,0
+390x664,0
+424x895,0
+424x907,1
+424x942,0
+437x972,0
+485x1076,0
+600x1024,0
+601x962,0
+744x1133,0
+800x1334,0
+834x1112,0
+915x412,0
+960x540,0
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+N-ty dzień
+
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+N-ty dzień
+
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Aplikacja,Wersja,Stan
+
+
+#  
+# Data rozpoczęcia: 20240926
+# Data zakończenia: 20240926
+Aplikacja,"Użytkownicy, u których nie wystąpił błąd"
+6088471696,1
+
+# Data rozpoczęcia: 20240925
+# Data zakończenia: 20240925
+Aplikacja,"Użytkownicy, u których nie wystąpił błąd"
+6088471696,0
+
+#  
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Model urządzenia,Aktywni użytkownicy
+
+
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Model urządzenia,Aktywni użytkownicy

@@ -1,0 +1,31 @@
+# ----------------------------------------
+# Wyeksportowany raport w formacie CSV
+# Konto: RYCHoo
+# Usługa: RYCHoo.TheUnixPlace.com
+# ----------------------------------------
+# 
+# Wszyscy użytkownicy
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+System operacyjny,Aktywni użytkownicy,Nowi użytkownicy,Sesje z zaangażowaniem,Współczynnik zaangażowania,Sesje z zaangażowaniem na aktywnego użytkownika,Średni czas zaangażowania na aktywnego użytkownika,Liczba zdarzeń,Kluczowe zdarzenia,Łączne przychody
+iOS,436,435,7,0.016055045871559634,0.016055045871559634,0.2591743119266055,1326,0,0
+Android,233,231,112,0.3035230352303523,0.48068669527896996,14.360515021459227,1489,0,0
+Windows,200,187,320,0.5369127516778524,1.6,134.71,2901,0,0
+Linux,31,30,32,0.7272727272727273,1.032258064516129,61.29032258064516,249,0,0
+Macintosh,14,10,9,0.5294117647058824,0.6428571428571429,62.5,71,0,0
+Chrome OS,6,6,6,1,1,25,35,0,0
+(not set),1,1,0,0,0,0,3,0,0
+FreeBSD,1,1,3,0.75,3,77,20,0,0
+
+# Wszyscy użytkownicy
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+System operacyjny,Aktywni użytkownicy,Nowi użytkownicy,Sesje z zaangażowaniem,Współczynnik zaangażowania,Sesje z zaangażowaniem na aktywnego użytkownika,Średni czas zaangażowania na aktywnego użytkownika,Liczba zdarzeń,Kluczowe zdarzenia,Łączne przychody
+iOS,6,6,4,0.5,0.6666666666666666,0.5,31,0,0
+Android,17,17,13,0.7222222222222222,0.7647058823529411,47.88235294117647,74,0,0
+Windows,11,11,7,0.5,0.6363636363636364,56.90909090909091,56,0,0
+Linux,1,1,1,1,1,5,5,0,0
+Macintosh,0,0,0,0,0,0,0,0,0
+Chrome OS,1,1,1,1,1,2,4,0,0
+(not set),0,0,0,0,0,0,0,0,0
+FreeBSD,0,0,0,0,0,0,0,0,0

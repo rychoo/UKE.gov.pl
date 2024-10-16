@@ -1,0 +1,37 @@
+# ----------------------------------------
+# Wyeksportowany raport w formacie CSV
+# Konto: RYCHoo
+# Usługa: RYCHoo.TheUnixPlace.com
+# ----------------------------------------
+# 
+# Wszyscy użytkownicy
+# Data rozpoczęcia: 20230926
+# Data zakończenia: 20240926
+Kraj,Aktywni użytkownicy,Nowi użytkownicy,Sesje z zaangażowaniem,Współczynnik zaangażowania,Sesje z zaangażowaniem na aktywnego użytkownika,Średni czas zaangażowania na aktywnego użytkownika,Liczba zdarzeń,Kluczowe zdarzenia,Współczynnik kluczowych zdarzeń związanych z użytkownikiem,Łączne przychody
+Luxembourg,2,0,1,0.5,0.5,0,5,0,0,0
+Russia,2,1,0,0,0,0,5,0,0,0
+Singapore,2,2,0,0,0,0,8,0,0,0
+Bangladesh,1,1,0,0,0,0,4,0,0,0
+Belgium,1,1,0,0,0,0,4,0,0,0
+Denmark,1,1,0,0,0,0,3,0,0,0
+Isle of Man,1,1,1,1,1,39,5,0,0,0
+Jamaica,1,1,0,0,0,0,3,0,0,0
+Japan,1,1,1,1,1,0,6,0,0,0
+Seychelles,1,1,0,0,0,0,4,0,0,0
+Western Sahara,1,1,0,0,0,0,3,0,0,0
+
+# Wszyscy użytkownicy
+# Data rozpoczęcia: 20220927
+# Data zakończenia: 20230928
+Kraj,Aktywni użytkownicy,Nowi użytkownicy,Sesje z zaangażowaniem,Współczynnik zaangażowania,Sesje z zaangażowaniem na aktywnego użytkownika,Średni czas zaangażowania na aktywnego użytkownika,Liczba zdarzeń,Kluczowe zdarzenia,Współczynnik kluczowych zdarzeń związanych z użytkownikiem,Łączne przychody
+Luxembourg,0,0,0,0,0,0,0,0,0,0
+Russia,0,0,0,0,0,0,0,0,0,0
+Singapore,0,0,0,0,0,0,0,0,0,0
+Bangladesh,0,0,0,0,0,0,0,0,0,0
+Belgium,0,0,0,0,0,0,0,0,0,0
+Denmark,0,0,0,0,0,0,0,0,0,0
+Isle of Man,0,0,0,0,0,0,0,0,0,0
+Jamaica,0,0,0,0,0,0,0,0,0,0
+Japan,0,0,0,0,0,0,0,0,0,0
+Seychelles,0,0,0,0,0,0,0,0,0,0
+Western Sahara,0,0,0,0,0,0,0,0,0,0

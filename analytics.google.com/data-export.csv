@@ -1,0 +1,17 @@
+# ----------------------------------------
+# Wyeksportowany raport w formacie CSV
+# Konto: RYCHoo
+# Usługa: RYCHoo.TheUnixPlace.com
+# ----------------------------------------
+# 
+# Wszyscy użytkownicy
+# Data rozpoczęcia: 20240830
+# Data zakończenia: 20240926
+Kraj,Aktywni użytkownicy,Nowi użytkownicy,Sesje z zaangażowaniem,Współczynnik zaangażowania,Sesje z zaangażowaniem na aktywnego użytkownika,Średni czas zaangażowania na aktywnego użytkownika,Liczba zdarzeń,Kluczowe zdarzenia,Współczynnik kluczowych zdarzeń związanych z użytkownikiem,Łączne przychody
+Poland,15,10,48,0.5454545454545454,3.2,102.86666666666666,383,0,0,0
+United States,4,2,1,0.2,0.25,1.75,15,0,0,0
+India,2,2,2,1,1,20.5,13,0,0,0
+United Kingdom,2,1,1,0.5,0.5,0.5,5,0,0,0
+Belgium,1,1,0,0,0,0,4,0,0,0
+France,1,1,1,1,1,11,5,0,0,0
+Germany,1,1,1,1,1,9,5,0,0,0
