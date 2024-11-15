@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'gatesnotes-icons-2019';
+  src: url('../fonts/gatesnotes-icons-2019.eot?77849758');
+  src: url('../fonts/gatesnotes-icons-2019.eot?77849758#iefix') format('embedded-opentype'),
+       url('../fonts/gatesnotes-icons-2019.woff2?77849758') format('woff2'),
+       url('../fonts/gatesnotes-icons-2019.woff?77849758') format('woff'),
+       url('../fonts/gatesnotes-icons-2019.ttf?77849758') format('truetype'),
+       url('../fonts/gatesnotes-icons-2019.svg?77849758#gatesnotes-icons-2019') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'gatesnotes-icons-2019';
+    src: url('../fonts/gatesnotes-icons-2019.svg?77849758#gatesnotes-icons-2019') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "gatesnotes-icons-2019";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-article-thumbnail-bookmark-outline:before { content: '\e800'; } /* '' */
+.icon-article-thumbnail-bookmark:before { content: '\e801'; } /* '' */
+.icon-book-outline:before { content: '\e802'; } /* '' */
+.icon-bookmark-outline:before { content: '\e803'; } /* '' */
+.icon-bookmark:before { content: '\e804'; } /* '' */
+.icon-check-mark:before { content: '\e805'; } /* '' */
+.icon-clock:before { content: '\e806'; } /* '' */
+.icon-close-x:before { content: '\e807'; } /* '' */
+.icon-comment-outline:before { content: '\e808'; } /* '' */
+.icon-comment:before { content: '\e809'; } /* '' */
+.icon-conversation:before { content: '\e80a'; } /* '' */
+.icon-dot:before { content: '\e80b'; } /* '' */
+.icon-down-arrow:before { content: '\e80c'; } /* '' */
+.icon-download:before { content: '\e80d'; } /* '' */
+.icon-drop-down:before { content: '\e80e'; } /* '' */
+.icon-edit-cover:before { content: '\e80f'; } /* '' */
+.icon-edit-profile:before { content: '\e810'; } /* '' */
+.icon-edit:before { content: '\e811'; } /* '' */
+.icon-exclamation:before { content: '\e812'; } /* '' */
+.icon-gallery:before { content: '\e814'; } /* '' */
+.icon-gift:before { content: '\e815'; } /* '' */
+.icon-instagram:before { content: '\e817'; } /* '' */
+.icon-left-arrow:before { content: '\e818'; } /* '' */
+.icon-left-point-arrow:before { content: '\e819'; } /* '' */
+.icon-like-heart-selected:before { content: '\e81a'; } /* '' */
+.icon-like-heart-unselected:before { content: '\e81b'; } /* '' */
+.icon-link:before { content: '\e81c'; } /* '' */
+.icon-linkedin:before { content: '\e81d'; } /* '' */
+.icon-loading:before { content: '\e81e'; } /* '' */
+.icon-lock:before { content: '\e81f'; } /* '' */
+.icon-mail:before { content: '\e820'; } /* '' */
+.icon-pause:before { content: '\e821'; } /* '' */
+.icon-play:before { content: '\e822'; } /* '' */
+.icon-plus:before { content: '\e823'; } /* '' */
+.icon-profile:before { content: '\e824'; } /* '' */
+.icon-reply:before { content: '\e825'; } /* '' */
+.icon-right-arrow:before { content: '\e826'; } /* '' */
+.icon-right-point-arrow:before { content: '\e827'; } /* '' */
+.icon-rss:before { content: '\e828'; } /* '' */
+.icon-search:before { content: '\e829'; } /* '' */
+.icon-section-break:before { content: '\e82a'; } /* '' */
+.icon-settings:before { content: '\e82b'; } /* '' */
+.icon-share:before { content: '\e82c'; } /* '' */
+.icon-translate-icon:before { content: '\e82d'; } /* '' */
+.icon-twitter:before { content: '\e82e'; } /* '' */
+.icon-up-arrow:before { content: '\e82f'; } /* '' */
+.icon-video-outline:before { content: '\e830'; } /* '' */
+.icon-youtube:before { content: '\e831'; } /* '' */
+.icon-hamburger-menu-3:before { content: '\e832'; } /* '' */
+.icon-facebook:before { content: '\e833'; } /* '' */

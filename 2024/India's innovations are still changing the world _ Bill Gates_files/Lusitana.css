@@ -1,0 +1,53 @@
+﻿/*
+@font-face {
+  font-family: "Lusitana";
+  src: url("../fonts/Lusitana/Lusitana-Regular-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LusitanaBold";
+  src: url("../fonts/Lusitana/Lusitana-Bold-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+*/
+@font-face {
+    font-family: "Lusitana";
+    src: url("../fonts/Lusitana/Lusitana-Regular-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LusitanaBold";
+    src: url("../fonts/Lusitana/Lusitana-Bold-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LusitanaSemiBold";
+    src: url("../fonts/Lusitana/Lusitana-SemiBold-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LusitanaItalic";
+    src: url("../fonts/Lusitana/Lusitana-Italic-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LusitanaItalicBold";
+    src: url("../fonts/Lusitana/Lusitana-BoldItalic-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LusitanaItalicSemiBold";
+    src: url("../fonts/Lusitana/Lusitana-SemiBoldItalic-OTF.ttf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+

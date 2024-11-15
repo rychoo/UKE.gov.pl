@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:variable name="url" select="'red'" />
+
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title><xsl:value-of select="/rss/channel/title" /></title>
+
+
+      </head>
+      
+      <body onload="" style="font-family:'HelveticaNeueW01-45Ligh','Helvetica LT Std Light','Helvetica Neue LT Std',Helvetica;">
+        <div id="cometestme" style="display:none;">
+          <xsl:text disable-output-escaping="yes">&amp;amp;</xsl:text>
+        </div>
+        
+        <div id="outer">
+        
+
+
+	<div class="heading">
+		<p class="feednametitle" style="font-size:36px;color:#000;letter-spacing: -1.5px;font-weight: normal;font-style: normal;margin-top: 0px;margin-bottom: 10px;" id="feednametitle"><xsl:value-of select="/rss/channel/title" /></p>
+		<h4 class="feednameinfo" style="font-size:18px;color:#666;font-weight: normal;font-style: normal;margin-top: 0px;margin-bottom: 10px;"><xsl:value-of select="/rss/channel/description" /><xsl:text></xsl:text></h4>
+		<p class="builddate" style="font-size:14px;color:#666;font-weight: normal;font-style: normal;margin-top: 0px;"><xsl:value-of select="/rss/channel/lastBuildDate" /></p>
+	</div><!-- end heading-->
+        
+    <div id="items">
+
+            <xsl:for-each select="/rss/channel/item">
+              <div class="item" style="border: 0px solid #fff;margin-bottom: 20px;border-bottom: 2px solid #ddd;display: block;max-width: 600px;padding-bottom: 10px;">
+               <h3 class="header" style="margin-top: 0px;margin-bottom: 4px;" ><a style="font-size:26px !important;color:#000;letter-spacing: -1.5px;font-weight: normal;font-style: normal;margin-top: 0px;margin-bottom: 0px;color:#3379be;text-decoration: underline;" href="{link}"><xsl:value-of select="title" /></a></h3>
+               <p class="pubdate" style="font-size:14px;color:#666;font-weight: normal;font-style: normal;margin-top: 0px;margin-bottom: 10px;"><xsl:value-of select="pubDate" /></p>
+               <span style="font-size:18px;color:#000;font-weight: normal;font-style: normal;max-width: 600px;display: block;font-family: Lusitana,serif;"><xsl:value-of select="description" disable-output-escaping="yes" /></span>
+			  </div><!-- end item (class) -->            
+            </xsl:for-each>
+            <p name="decodeable" class="itembody"></p>
+    </div><!-- end items (ID) -->
+
+</div>
+
+    </body>
+    </html>
+  </xsl:template>
+
+<xsl:output method="html"
+            encoding="UTF-8"
+            indent="no"/>
+
+
+  
+</xsl:stylesheet>

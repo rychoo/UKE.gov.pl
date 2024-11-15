@@ -1,0 +1,60 @@
+﻿@font-face {
+    font-family: "ConveyBold";
+    src: url("../fonts/MagazineFonts/Convey-Bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ConveyBoldItalic";
+    src: url("../fonts/MagazineFonts/Convey-BoldItalic.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ConveyItalic";
+    src: url("../fonts/MagazineFonts/Convey-Italic.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ConveyMedium";
+    src: url("../fonts/MagazineFonts/Convey-Medium.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ConveyMediumItalic";
+    src: url("../fonts/MagazineFonts/Convey-MediumItalic.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ConveyRegular";
+    src: url("../fonts/MagazineFonts/Convey-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "IdealSansSemiboldItalicPro";
+    src: url("../fonts/MagazineFonts/IdealSans-SemiboldItalic-Pro.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "IdealSansSemiboldPro";
+    src: url("../fonts/MagazineFonts/IdealSans-Semibold-Pro.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "LCPukara";
+    src: url("../fonts/MagazineFonts/LC-Pukara.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "F37JudgeBoldExtended";
+    src: url("../fonts/MagazineFonts/F37Judge-BoldExtended.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
