@@ -1,0 +1,319 @@
+/* CSS Document pour les pages de la planete "Sides"  */
+/* CSS modifiant le design des structures generales gerees dans les fichiers /common/css/ */
+
+
+
+/*  Local CSS Reset */
+
+	/* Reinitialisation des balises de liste */
+	ul{	list-style: 				none;	}
+	ol{
+		border: 					0;
+		font-weight: 				inherit;
+		font-style: 				inherit;
+		font-family: 				inherit;
+		vertical-align: 			baseline;
+	}
+	/* Reinitialisation des balises generiques */
+	html, body, ul, li, table, caption, tbody, tfoot, thead, tr, th, td{
+		margin: 					0;
+		
+		border: 					0;
+		font-weight: 				inherit;
+		font-style: 				inherit;
+		font-family: 				inherit;
+/*		vertical-align: 			baseline; */
+	}
+
+/* ======================================================================================================== */
+/* =  HEADER - SIDES ======================================================================== */
+/* ======================================================================================================== */
+
+	/* HEADER - CONTENEUR  */
+
+
+
+#header_sides {
+		position:relative;
+		height:129px;
+		background: url(../img/background/sides_header_bg.png) repeat-x;
+	}
+	
+#header_sides img {position:absolute; left:9px; top:8px; height:43px;}
+#header_sides span {
+	color:white; 
+	font:1.2em Arial, Helvetica, sans-serif; 
+	letter-spacing: -0.04em; 
+	text-shadow: 1px 1px 1px #0D0D0D;
+	position:absolute;left:33px; top:55px;
+	white-space: nowrap;
+	}
+#header_sides .language_select {
+	top:100px;
+	right:15px;
+	position:absolute;
+	height:20px;
+}
+
+#header_sides .language_select li {
+	float:left; 
+	margin-left: 4px;
+	width:15px; 
+	height:15px; 
+	text-indent: -10000px;
+}
+#header_sides .language_select li a {
+	width:15px; 
+	height:15px; 
+	overflow:hidden;  
+	background-position: left top;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0;
+    text-indent: -10000px;
+    cursor:default;
+    
+        }
+        
+
+/*  If document is NOT present = grey */
+
+#header_sides .language_select li a.bg,
+#header_sides .language_select li.bg {background: url(../img/languages/boxbody_icon_lang_bg.gif) no-repeat;}
+
+#header_sides .language_select li a.es,
+#header_sides .language_select li.es {background: url(../img/languages/boxbody_icon_lang_es.gif) no-repeat;}
+
+#header_sides .language_select li a.cs,
+#header_sides .language_select li.cs {background: url(../img/languages/boxbody_icon_lang_cs.gif) no-repeat;}
+
+#header_sides .language_select li a.da,
+#header_sides .language_select li.da {background: url(../img/languages/boxbody_icon_lang_da.gif) no-repeat;}
+
+#header_sides .language_select li a.de,
+#header_sides .language_select li.de {background: url(../img/languages/boxbody_icon_lang_de.gif) no-repeat;}
+
+#header_sides .language_select li a.et,
+#header_sides .language_select li.et {background: url(../img/languages/boxbody_icon_lang_et.gif) no-repeat;}
+
+#header_sides .language_select li a.el,
+#header_sides .language_select li.el {background: url(../img/languages/boxbody_icon_lang_el.gif) no-repeat;}
+
+#header_sides .language_select li a.en,
+#header_sides .language_select li.en {background: url(../img/languages/boxbody_icon_lang_en.gif) no-repeat;}
+
+#header_sides .language_select li a.fr,
+#header_sides .language_select li.fr {background: url(../img/languages/boxbody_icon_lang_fr.gif) no-repeat;}
+
+#header_sides .language_select li a.ga,
+#header_sides .language_select li.ga {background: url(../img/languages/boxbody_icon_lang_ga.gif) no-repeat;}
+
+#header_sides .language_select li a.it,
+#header_sides .language_select li.it {background: url(../img/languages/boxbody_icon_lang_it.gif) no-repeat;}
+ 
+#header_sides .language_select li a.lv,
+#header_sides .language_select li.lv {background: url(../img/languages/boxbody_icon_lang_lv.gif) no-repeat;}
+
+#header_sides .language_select li a.lt,
+#header_sides .language_select li.lt {background: url(../img/languages/boxbody_icon_lang_lt.gif) no-repeat;}
+
+#header_sides .language_select li a.hr,
+#header_sides .language_select li.hr {background: url(../img/languages/boxbody_icon_lang_hr.gif) no-repeat;}
+
+#header_sides .language_select li a.hu,
+#header_sides .language_select li.hu {background: url(../img/languages/boxbody_icon_lang_hu.gif) no-repeat;}
+
+#header_sides .language_select li a.mt,
+#header_sides .language_select li.mt {background: url(../img/languages/boxbody_icon_lang_mt.gif) no-repeat;}
+
+#header_sides .language_select li a.nl,
+#header_sides .language_select li.nl {background: url(../img/languages/boxbody_icon_lang_nl.gif) no-repeat;}
+
+#header_sides .language_select li a.pl,
+#header_sides .language_select li.pl {background: url(../img/languages/boxbody_icon_lang_pl.gif) no-repeat;}
+
+#header_sides .language_select li a.pt,
+#header_sides .language_select li.pt {background: url(../img/languages/boxbody_icon_lang_pt.gif) no-repeat;}
+
+#header_sides .language_select li a.ro,
+#header_sides .language_select li.ro {background: url(../img/languages/boxbody_icon_lang_ro.gif) no-repeat;}
+
+#header_sides .language_select li a.sk,
+#header_sides .language_select li.sk {background: url(../img/languages/boxbody_icon_lang_sk.gif) no-repeat;}
+
+#header_sides .language_select li a.sl,
+#header_sides .language_select li.sl {background: url(../img/languages/boxbody_icon_lang_sl.gif) no-repeat;}
+
+#header_sides .language_select li a.fi,
+#header_sides .language_select li.fi {background: url(../img/languages/boxbody_icon_lang_fi.gif) no-repeat;}  
+
+#header_sides .language_select li a.sv,
+#header_sides .language_select li.sv {background: url(../img/languages/boxbody_icon_lang_sv.gif) no-repeat;}
+
+/*  If document is present in a specific language = light blue */
+#header_sides .language_select li a.on {background-position: -15px top !important; cursor:pointer;}  
+
+
+/*  Current language for this document = dark blue */
+
+#header_sides .language_select li.selected {background-position: -30px top !important;}  
+
+/*
+#header_sides .language_select li.bg.selected {background: url(../img/languages/boxbody_icon_lang_bg_selected.gif) no-repeat;}
+#header_sides .language_select li.es.selected {background: url(../img/languages/boxbody_icon_lang_es_selected.gif) no-repeat;}
+#header_sides .language_select li.cs.selected {background: url(../img/languages/boxbody_icon_lang_cs_selected.gif) no-repeat;}
+#header_sides .language_select li.da.selected {background: url(../img/languages/boxbody_icon_lang_da_selected.gif) no-repeat;}
+#header_sides .language_select li.de.selected {background: url(../img/languages/boxbody_icon_lang_de_selected.gif) no-repeat;}
+#header_sides .language_select li.et.selected {background: url(../img/languages/boxbody_icon_lang_et_selected.gif) no-repeat;}
+#header_sides .language_select li.el.selected {background: url(../img/languages/boxbody_icon_lang_el_selected.gif) no-repeat;}
+#header_sides .language_select li.en.selected {background: url(../img/languages/boxbody_icon_lang_en_selected.gif) no-repeat;}
+#header_sides .language_select li.fr.selected {background: url(../img/languages/boxbody_icon_lang_fr_selected.gif) no-repeat;}
+#header_sides .language_select li.ga.selected {background: url(../img/languages/boxbody_icon_lang_ga_selected.gif) no-repeat;}
+#header_sides .language_select li.it.selected {background: url(../img/languages/boxbody_icon_lang_it_selected.gif) no-repeat;}
+#header_sides .language_select li.lv.selected {background: url(../img/languages/boxbody_icon_lang_lv_selected.gif) no-repeat;}
+#header_sides .language_select li.lt.selected {background: url(../img/languages/boxbody_icon_lang_lt_selected.gif) no-repeat;}
+#header_sides .language_select li.hr.selected {background: url(../img/languages/boxbody_icon_lang_hr_selected.gif) no-repeat;}
+#header_sides .language_select li.hu.selected {background: url(../img/languages/boxbody_icon_lang_hu_selected.gif) no-repeat;}
+#header_sides .language_select li.mt.selected {background: url(../img/languages/boxbody_icon_lang_mt_selected.gif) no-repeat;}
+#header_sides .language_select li.nl.selected {background: url(../img/languages/boxbody_icon_lang_nl_selected.gif) no-repeat;}
+#header_sides .language_select li.pl.selected {background: url(../img/languages/boxbody_icon_lang_pl_selected.gif) no-repeat;}
+#header_sides .language_select li.pt.selected {background: url(../img/languages/boxbody_icon_lang_pt_selected.gif) no-repeat;}
+#header_sides .language_select li.ro.selected {background: url(../img/languages/boxbody_icon_lang_ro_selected.gif) no-repeat;}
+#header_sides .language_select li.sk.selected {background: url(../img/languages/boxbody_icon_lang_sk_selected.gif) no-repeat;}
+#header_sides .language_select li.sl.selected {background: url(../img/languages/boxbody_icon_lang_sl_selected.gif) no-repeat;}
+#header_sides .language_select li.fi.selected {background: url(../img/languages/boxbody_icon_lang_fi_selected.gif) no-repeat;}
+#header_sides .language_select li.sv.selected {background: url(../img/languages/boxbody_icon_lang_sv_selected.gif) no-repeat;}
+*/
+
+
+/* ======================================================================================================== */
+/* = PARLIAMENT BODY - BOITE ============================================================================== */
+/* ======================================================================================================== */
+
+	/* BODY - PRODUIT EDITORIAL (element texte): Modification de la gestion des marges pour les elements textuels */
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext{
+		margin-bottom:				0;
+	}
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext p, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext p,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext ul, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext ul,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext ol, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext ol,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext table, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext table, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext table,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext table{
+		padding-bottom:				12px;
+	}
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext li ul, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext li ul,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext li ol, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext li ol,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext li table, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_element1col 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_element2col 	.ep_elementtext li table, 		
+	#maincontent .ep_boxbody .ep_element3col 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementlist1 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementlist2 	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementpeople1	.ep_elementtext li table,
+	#maincontent .ep_boxbody .ep_elementpeople2	.ep_elementtext li table{
+		padding-top:				6px;
+		padding-bottom:				0;
+	}
+	
+	
+/* NEW LOGO LAYOUT */
+#header_sides.new span {
+    border-left: 1px solid white;
+    color: white;
+    font: 1.4em/33px Arial,Helvetica,sans-serif;
+    left: 133px;
+    letter-spacing: 0;
+    padding-left: 14px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #0d0d0d;
+    top: 40px;
+    white-space: nowrap;
+}
+#header_sides.new a {
+    
+}
+#header_sides a img {
+    border: none;
+    height: 63px;
+    top: 11px;
+    width: 112px;
+}
+#header_sides.new span:hover {
+    text-decoration: underline;
+}
+
+/*#header_sides.new a img {
+    border: none;
+    height: auto;
+    left: -12px;
+    top: -10px;
+    width: 150px;
+}*/
+#header_sides.new a img {
+    border: medium none;
+    height: 145px;
+    left: -12px;
+    top: -10px;
+    width: auto;
+}
+#header_sides.new {
+    background: url("../img/background/sides_header_bg_new.png") repeat-x scroll 0 -30px rgba(0, 0, 0, 0);
+    height: 162px;
+}
+#header_sides.new ul {
+    top: 133px;
+}

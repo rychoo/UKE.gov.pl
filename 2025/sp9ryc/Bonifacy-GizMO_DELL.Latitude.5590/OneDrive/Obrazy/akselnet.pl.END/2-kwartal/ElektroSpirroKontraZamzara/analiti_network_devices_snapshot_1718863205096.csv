@@ -1,0 +1,4 @@
+IP Addresses,MAC Addresses,Manufacturers,Trusted,Alias,DNS Names,NetBios Names,SSDP Manufacturers,SSDP Models,SSDP Names,SSDP UDNs,SNMP Names,mDNS Services,HTTP Servers,Ping (AVG)
+192.168.1.1,,,false,,Teltonika-RUT950.com,,,,,,,,,2.150416
+192.168.1.100,,,false,,HUAWEI_P30-eb78e71d7f8485.lan,,,,,,,,,
+192.168.1.145,,motorola,false,,,,motorola,moto g(50),,4f1a6cd2-05da-4c01-9ee5-3b5061fe2a37,,,,

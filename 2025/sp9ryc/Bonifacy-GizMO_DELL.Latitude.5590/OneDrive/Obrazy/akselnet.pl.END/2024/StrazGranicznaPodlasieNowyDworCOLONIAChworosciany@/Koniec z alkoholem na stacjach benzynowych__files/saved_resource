@@ -1,0 +1,134 @@
+var ad_time="237ae0ac-44c4-458b-a39d-a785695df89c";
+/* */
+(function(p){
+        p.src = "//dmp.adform.net/serving/cookie/match?party=1147&cid="+ad_time;
+    })(document.createElement("img"));
+/* */
+if(typeof pollsterTrack != 'undefined' && typeof pollsterTrack.getCookieValue == 'function' && pollsterTrack.getCookieValue('_pubCommonId') != "") (function(p){
+        p.src = "//content.pollster.pl/?s=7&gid=_pubCommonId&cm="+pollsterTrack.getCookieValue('_pubCommonId');
+    })(document.createElement("img"));
+/* */
+if (typeof pollsterTrack != 'undefined' && typeof pollsterTrack.event == 'function' && typeof ID5 != 'undefined' && typeof ID5.init == 'function' && ID5.loaded == true) {
+    let id5Status = ID5.init({
+        partnerId: 962
+    });
+    if (id5Status.getUserId() != undefined) {
+        if (
+            (document.location.href.indexOf('mjakmama24.pl/dom') !== -1) ||
+            (document.location.href.indexOf('muratordom.pl') !== -1) ||
+            (document.location.href.indexOf('kb.pl') !== -1) ||
+            (document.location.href.indexOf('fajnyogrod.pl') !== -1) ||
+            (document.location.href.indexOf('muratorplus.pl') !== -1) ||
+            (document.location.href.indexOf('urzadzamy.pl') !== -1) ||
+            (document.location.href.indexOf('aniaradzi.pl') !== -1) ||
+            (document.location.href.indexOf('dom.pl') !== -1) ||
+            (document.location.href.indexOf('murator.pl') !== -1) ||
+            (document.location.href.indexOf('pralki') !== -1) ||
+            (document.location.href.indexOf('zmywarki') !== -1) ||
+            (document.location.href.indexOf('suszark') !== -1 && document.location.href.indexOf('wlos') !== -1) ||
+            (document.location.href.indexOf('maszyna') !== -1 && document.location.href.indexOf('szycia') !== -1) ||
+            (document.location.href.indexOf('draparka') !== -1) ||
+            (document.location.href.indexOf('pralka') !== -1) ||
+            (document.location.href.indexOf('odkurzacz') !== -1) ||
+            (document.location.href.indexOf('okap') !== -1 && document.location.href.indexOf('kuchenny')) ||
+            (document.location.href.indexOf('prasownica') !== -1) ||
+            (document.location.href.indexOf('suszarka') !== -1) ||
+            (document.location.href.indexOf('zelazk') !== -1) ||
+            (document.location.href.indexOf('robot') !== -1 && document.location.href.indexOf('kuchenn') !== -1) ||
+            (document.location.href.indexOf('blender') !== -1) ||
+            (document.location.href.indexOf('sprzet') !== -1 && document.location.href.indexOf('kuchenn') !== -1) ||
+            (document.location.href.indexOf('artyk') !== -1 && document.location.href.indexOf('gosp') !== -1 && document.location.href.indexOf('domow') !== -1) ||
+            (document.location.href.indexOf('rtv') !== -1 && document.location.href.indexOf('agd') !== -1) ||
+            (document.location.href.indexOf('agd') !== -1 && document.location.href.indexOf('rtv') !== -1)
+        ) {
+            (function(p){
+                p.src = "//dmp.adform.net/dmp/profile/?pid=10177&sg=IK1&eid_id5-sync.com_1="+id5Status.getUserId();
+            })(document.createElement("img"));
+        }
+    }
+}
+/* */
+if (
+    (document.location.href.indexOf('eska.pl') !== -1) ||
+    (document.location.href.indexOf('eskarock.pl') !== -1) ||
+    (document.location.href.indexOf('teksty.org') !== -1) ||
+    (document.location.href.indexOf('4clubbers.com.pl') !== -1) ||
+    (document.location.href.indexOf('bumovista.pl') !== -1) ||
+    (document.location.href.indexOf('eska.tv') !== -1) ||
+    (document.location.href.indexOf('eskago.pl') !== -1) ||
+    (document.location.href.indexOf('polotv.pl') !== -1) ||
+    (document.location.href.indexOf('radiowawa.pl') !== -1) ||
+    (document.location.href.indexOf('radioplus.pl') !== -1) ||
+    (document.location.href.indexOf('voxfm.pl') !== -1) ||
+    (document.location.href.indexOf('voxmusic.tv') !== -1)
+) {
+    if (typeof pollsterTrack != 'undefined' && typeof pollsterTrack.event == 'function') {
+        if (typeof ID5 != 'undefined' && typeof ID5.init == 'function' && ID5.loaded == true) {
+            let id5Callback = function (id5Status) {
+                if (id5Status.getUserId() != undefined) {
+                    (function (p) {
+                        p.src = "//dmp.adform.net/dmp/profile/?pid=10177&sg=gz_fpd_hp&eid_id5-sync.com_1=" + id5Status.getUserId();
+                    })(document.createElement("img"));
+                }
+            };
+            ID5.init({
+                partnerId: 962
+            }).onAvailable(id5Callback).onUpdate(id5Callback);
+        } else if (typeof pbjs != 'undefined' && typeof pbjs.getUserIds == 'function' && typeof pbjs.getUserIds()['id5id'] != "undefined") {
+            let userIds = pbjs.getUserIds();
+            if (typeof userIds['id5id']['uid'] != "undefined") {
+                (function (p) {
+                    p.src = "//dmp.adform.net/dmp/profile/?pid=10177&sg=gz_fpd_hp&eid_id5-sync.com_1=" + userIds['id5id']['uid'];
+                })(document.createElement("img"));
+            }
+        } else if (localStorage.getItem('id5id') != null) {
+            try {
+                let id5id = JSON.parse(decodeURIComponent(localStorage.getItem('id5id')));
+                if (typeof id5id['universal_uid'] != "undefined") {
+                    (function (p) {
+                        p.src = "//dmp.adform.net/dmp/profile/?pid=10177&sg=gz_fpd_hp&eid_id5-sync.com_1=" + id5id['universal_uid'];
+                    })(document.createElement("img"));
+                }
+            } catch {}
+        }
+    }
+}
+/* */
+fetch('//check.pollster.pl', {
+    credentials: 'include'
+})
+.then((response) => response.json())
+.then((data) => {
+  if (data.length > 0 && data.includes("BBOX") && typeof __tcfapi == 'function') {
+        var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        __tcfapi('getTCData', 2, (tcData, success) => {
+          if (success) {
+             (function(p){
+                 p.src = 'https://ad.doubleclick.net/ddm/activity/src=11819819;type=invmedia;cat=bbox_0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr='+Number(tcData.gdprApplies)+';gdpr_consent='+tcData.tcString+';ord=1;num=' + a + '?';
+             })(document.createElement("img"));
+          }
+        }, []);
+  }
+
+  data.push("T0_0"); // Test
+  if (typeof wbtg_value !== 'undefined' && data.length > 0) {
+     data = data.filter(segment => segment != "BBOX");
+     wbtg_value += ";intarget=["+data.join(",")+"]"
+  }
+
+})
+.catch((err) => {
+  console.error('check pollster request failed: ', err);
+});
+/* */
+setTimeout(function(){
+  if (typeof gemius_hcconn !== "undefined" && typeof gemius_hcconn.fpdata === "string") {
+    console.log("Pollster test: 1st party id - " + gemius_hcconn.fpdata);
+    if(typeof pollsterTrack != 'undefined' && typeof pollsterTrack.getCookieValue == 'function' && pollsterTrack.getCookieValue('__gfp_64b') != "") (function(p){
+      p.src = "//content.pollster.pl/?s=7&gid=__gfp_64b&cm="+pollsterTrack.getCookieValue('__gfp_64b');
+    })(document.createElement("img"));
+  }
+}, 1000)
+
+/* */

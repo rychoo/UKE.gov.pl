@@ -1,0 +1,3 @@
+IP Addresses,MAC Addresses,Manufacturers,Trusted,Alias,DNS Names,NetBios Names,SSDP Manufacturers,SSDP Models,SSDP Names,SSDP UDNs,SNMP Names,mDNS Services,HTTP Servers,Ping (AVG)
+10.128.128.128,e0:cb:bc:31:4a:57,Cisco Meraki,false,,,,,,,,,,,
+10.227.39.218,,motorola,false,,,,motorola,moto g(50),,4f1a6cd2-05da-4c01-9ee5-3b5061fe2a37,,,,

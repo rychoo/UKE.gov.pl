@@ -1,0 +1,29 @@
+/// START POUR OJ-SCHED : écran de synthèse
+jQuery(document).ready(function() {
+
+  //hide all expandable_content
+  jQuery(".expandable_content").hide();
+  
+  //show expandable_short_content for 'short presentation'
+  jQuery(".expandable_short_content").show();
+ 
+  jQuery(".expandable").click(function()
+  {
+     $(this).toggleClass('expandable_plus expandable_minus');
+/* slideToggle 
+    $(this).children(".expandable_content").toggleClass('hidden').slideToggle( );  
+    $(this).children(".expandable_short_content").toggleClass('hidden').slideToggle( );*/
+/* for use with 1.4.4   */
+    $(this).children(".expandable_content").toggleClass('hidden').fadeToggle( );  
+    $(this).children(".expandable_short_content").toggleClass('hidden').fadeToggle( );
+  });
+
+  jQuery(".expandableFirst").click(function()
+  {
+    $(this).toggleClass('expandable_first_plus expandable_first_minus'); 
+    $(this).children(".expandable_content").toggleClass('hidden').fadeToggle( );  
+    $(this).children(".expandable_short_content").toggleClass('hidden').fadeToggle( );
+  });
+});
+
+/// END POUR OJ-SCHED : écran de synthèse

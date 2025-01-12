@@ -1,0 +1,46 @@
+BT Addresses,Bluetooth Names,Manufacturers,RSSI,Tx Power,Bond State
+4B:D3:69:C1:51:89,,Apple,-84,8,10
+69:D3:C7:B0:DA:17,,Apple,,-127,0
+77:AD:00:D0:38:0E,LE-Philips TAA5608,,-88,-4,10
+6A:8A:20:3B:1A:4F,,Apple,-89,12,10
+"[""A4:C1:38:97:91:16"",""A4:C1:38:1D:A2:F5""]",LYWSD03MMC,Telink Semiconductor (Taipei) Co. Ltd.,-89,-127,10
+4F:95:08:EB:31:B0,,Apple,-86,-127,10
+CA:E8:F8:31:C2:A0,,Apple,-73,-127,10
+"[""C4:D3:6A:A3:36:11"",""F4:60:77:0B:1F:4F""]",BLE42,"[""Texas Instruments"",""MetaSystem""]",-90,0,10
+48:E0:6B:C1:F5:44,,Apple,-84,12,10
+3A:E1:44:8E:1A:E1,,Microsoft,-93,-127,10
+F0:5D:FA:81:A0:3A,,Apple,-86,-127,10
+5A:4F:9D:92:6F:C8,,Apple,-72,-127,10
+"[""A4:C1:38:97:91:16"",""A4:C1:38:1D:A2:F5""]",LYWSD03MMC,Telink Semiconductor (Taipei) Co. Ltd.,-89,-127,10
+60:22:F4:7A:FB:FA,,Apple,-77,-127,10
+EC:86:9D:48:8E:9A,,Apple,-87,-127,10
+79:38:4C:22:7C:68,,Apple,-90,10,10
+EE:FB:61:C0:F8:12,Flare RT,,-88,-127,10
+E1:02:43:C5:12:E0,,Apple,-90,-127,10
+10:4D:BC:58:82:F7,,,,-127,0
+7F:6D:3F:37:9F:94,,Google,-81,-127,10
+72:A3:C8:33:E8:AC,,Apple,-83,12,10
+56:88:1C:F2:9D:AB,,Apple,-93,-127,10
+5F:97:17:AD:B4:9D,,Apple,-78,12,10
+6D:BF:C2:F5:5E:A5,,Apple,-84,-127,10
+61:59:6C:25:7D:B7,,Microsoft,-93,-127,10
+DC:32:A6:90:4D:47,Amazfit GTS 3,Anhui Huami Information Technology,-88,-127,10
+D1:E3:7B:47:1A:71,,Apple,-84,-127,10
+F2:C4:4E:F9:C3:8E,,Apple,-97,-127,10
+6A:17:E7:A0:E1:C4,,Apple,-90,8,10
+7F:96:C8:D6:25:38,,Apple,-74,12,10
+D4:62:96:E6:28:E9,Ve628e9,Apple,-88,0,10
+09:FC:2A:C7:2D:9D,,Microsoft,-83,-127,10
+48:4C:A6:FA:8E:2D,,Microsoft,-78,-127,10
+70:B9:50:6B:D6:0A,,"[""Texas Instruments"",""MetaSystem""]",-91,-127,10
+61:89:77:36:83:62,,Apple,-84,-127,10
+79:50:CF:62:13:12,,Google,-92,-127,10
+7F:F9:8B:DF:33:0E,,Apple,-81,12,10
+7F:32:EF:7F:49:46,,Apple,-78,-127,10
+4F:2E:38:13:85:7E,,Apple,-90,-127,10
+64:64:F3:FD:7B:F2,,Apple,-76,12,10
+48:9F:26:2B:64:E2,,Apple,,-127,0
+"[""C4:D3:6A:A3:36:11"",""F4:60:77:0B:1F:4F""]",BLE42,"[""Texas Instruments"",""MetaSystem""]",-90,0,10
+ED:20:37:9D:0A:E0,,Apple,-93,-127,10
+32:AC:1E:0B:19:6E,,Microsoft,-88,-127,10
+75:A6:68:73:6D:2D,,Apple,-84,12,10

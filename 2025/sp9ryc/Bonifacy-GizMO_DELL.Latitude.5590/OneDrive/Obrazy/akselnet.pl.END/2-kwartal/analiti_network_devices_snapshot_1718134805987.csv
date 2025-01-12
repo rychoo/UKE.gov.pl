@@ -1,0 +1,9 @@
+IP Addresses,MAC Addresses,Manufacturers,Trusted,Alias,DNS Names,NetBios Names,SSDP Manufacturers,SSDP Models,SSDP Names,SSDP UDNs,SNMP Names,mDNS Services,HTTP Servers,Ping (AVG)
+192.168.68.1,,TP-LINK,false,,,,TP-LINK,M4R,M4R,e4c797e0-82ce-4f84-b56d-085d9d77c8cd,,,,
+192.168.68.100,8c:04:ba:12:a8:a1,Dell Inc.,false,,,,,,,,,,,
+192.168.68.101,c0:8f:20:7a:5c:93,"[""Shenzhen Skyworth Digital  Technology  CO., Ltd"",""SkyworthDigital""]",false,,,,SkyworthDigital,CANAL PLUS BOX,sony,a49a2edc-4256-2434-ef96-7b933618b728,,"_googlecast._tcp (port 8009, name: $a49a2edc-4256-2434-ef96-7b933618b728)",,177.246685
+192.168.68.102,,,false,,,,,,,,,,,
+192.168.68.103,08:00:27:84:02:82,PCS Systemtechnik GmbH,false,,,,,,,,,,400 Bad Request (Apache/2.4.58 (FreeBSD) PHP/8.3.3),127.690586
+192.168.68.104,,HUAWEI,false,,,,HUAWEI,ATU-L21,,aaea4b03-51e5-5e8e-0000-018e5fe68d55,,,,
+192.168.68.105,08:00:27:6a:b0:6e,PCS Systemtechnik GmbH,false,,,,,,,,,,400 Bad Request (nginx/1.22.1),
+fe80::c206:c3ff:fe29:350c,c0:06:c3:29:35:0c,"[""TP-LINK"",""TP-Link Corporation Limited""]",false,,,,TP-LINK,M4R,M4R,e4c797e0-82ce-4f84-b56d-085d9d77c8cd,,,,

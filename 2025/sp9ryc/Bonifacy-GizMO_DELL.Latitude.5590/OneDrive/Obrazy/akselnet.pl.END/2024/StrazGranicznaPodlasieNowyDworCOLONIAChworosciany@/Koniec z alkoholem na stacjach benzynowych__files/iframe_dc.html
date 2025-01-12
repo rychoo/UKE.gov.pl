@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://cdn2.pollster.pl/iframe_dc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="referrer" content="no-referrer">
+</head>
+<body>
+<script type="text/javascript">
+    window.addEventListener("message", handleMessage, false);
+    function handleMessage(e) {
+        let {key, value, method} = e.data;
+        if (method === 'store') {
+            window.localStorage.setItem(key, value);
+            console.log("pollsterTrack: Consent saved to storage!");
+        } else if (method === 'retrieve') {
+            let value = window.localStorage.getItem(key);
+            console.log("pollsterTrack: Consent retrieved from storage.");
+            e.source.postMessage({
+                key,
+                value,
+                method: 'consentResponse'
+            }, '*');
+        }
+    }
+</script>
+
+</body></html>

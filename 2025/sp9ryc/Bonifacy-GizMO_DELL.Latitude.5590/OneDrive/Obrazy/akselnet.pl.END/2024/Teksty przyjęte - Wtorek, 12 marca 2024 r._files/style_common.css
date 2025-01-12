@@ -1,0 +1,795 @@
+html {
+	font-size: 100%;
+}
+
+body { 
+	margin:0px; 
+	padding:0px; 
+	font-family: Arial, Helvetica, sans-serif;
+	color:#000000;
+	background:#ffffff;
+	font-size: 1em;
+	font-weight:normal;
+}
+/* Resized font for Poll pop up */
+body #pollpopup{
+	font-size:	62.5%;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* Used for EI's menu */
+/*----------------------------------------------------------------------------*/
+/* Background image of the EI's menu */
+.topmenu_EI { background-image:   url("../img/topmenu_eibackground.gif"); }
+
+/* EI Link */
+.topmenu_EI a {
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size: 0.8em;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	color:#02519C;
+	white-space:nowrap;
+}
+.topmenu_languageBar
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size: 0.8em;
+}
+
+/* Sets the background and the color of EI when mouse is over */
+.topmenu_news a:hover { background-color:#C285C2; color:#000000; }
+.topmenu_parliament a:hover { background-color:#99CCFF; color:#000000; }
+.topmenu_members a:hover { background-color:#F3BF58; color:#000000; }
+.topmenu_activities a:hover { background-color:#BD7D7D; color:#000000; }
+.topmenu_eplive a:hover { background-color:#999900; color:#000000; }
+.topmenu_hearings a:hover		{ background-color:#FFFFFF; color:#000000; }
+
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Used for SEI's menu */
+/*----------------------------------------------------------------------------*/
+/* SEI Link */
+.topmenu_SEI a {
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size: 0.8em;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	color:#000000;
+	white-space:nowrap;
+}
+
+/* Underline the SEI when mouse is over */
+.topmenu_SEI a:hover {
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size: 0.8em;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	text-align:center;
+	text-decoration:underline;
+	display:block;
+	color:#000000;
+	white-space:nowrap;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*  Header -- Select Language  */
+/*----------------------------------------------------------------------------*/
+
+/* Background image of the search form (left) */
+.searchbackground 	{ background-image:   url("../img/topmenu_search_background.gif"); }
+
+select#select_lg2, form#language_form {
+	margin:0;
+	padding:0;
+}
+	
+form#language_form {
+	text-align:right;
+	}
+	
+form#language_form select {
+	border:1px solid #6679B4;
+	}
+
+form#language_form input {
+	background-color:#C2C5D7;
+	border:1px solid #6679B4;
+	color:#000000;
+	cursor:pointer;
+	font-size:10px;
+	margin:1px 3px 1px 1px;
+	padding:1px;
+}
+
+/*----------------------------------------------------------------------------*/
+/*  Header -- Search Box  */
+/*----------------------------------------------------------------------------*/
+
+input.searchokvalid {
+	background-color:#C2C5D7;
+	border:1px solid #6679B4;
+	color:#000000;
+	cursor:pointer;
+	font-size:10px;
+	font-weight:normal;
+	margin:0;
+	padding:0.1em;
+	}
+	
+div#search_box {
+	text-align:center;
+	padding-top:2px;
+}
+
+div#search_box form {
+	margin:0;
+	padding:0;
+}
+	
+/*----------------------------------------------------------------------------*/
+/* Used for left menu */
+/*----------------------------------------------------------------------------*/
+/* Left menu Link */
+.leftmenu_item a {
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom:1px;
+	border:1px #FFFFFF solid;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:0.7em;
+	color:#000000;
+	padding-left:5px;
+	padding-bottom:3px;
+	text-decoration:none;
+	display:block;
+}
+
+.leftmenu_item_active {
+	width:87%;
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom:1px;
+	border:1px #FFFFFF solid;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-weight:bold;
+	font-size: 0.7em;
+	color:#000000;
+	padding-left:12px;
+	padding-bottom:3px;
+	text-decoration:none;
+	display:block;
+}
+
+/* Toolbox */
+.toolbox { width:140px; border:1px solid #D0D0D0; background :#F7F7F7; }
+.toolbox a { font-family:Arial, Helvetica, sans-serif; font-size:0.65em; color:#000000; text-decoration:none; }
+
+
+/*----------------------------------------------------------------------------*/
+/* Bread crumbs */
+.breadcrumb { 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size: 0.7em; 
+	color:#999999; 
+	padding-left:10px;
+}
+
+.breadcrumb a {
+	font-family:Arial, Helvetica, sans-serif; 
+	color:#999999; 
+	text-decoration:none; 
+}
+
+.breadcrumb a:hover { text-decoration:underline; }
+
+/*----------------------------------------------------------------------------*/
+/* Flash boxes */ 
+/*----------------------------------------------------------------------------*/
+
+/* White box */
+.flashbox
+{
+	border:1px solid #c5c5c7;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:0.8em;
+	padding:10px;
+}
+
+/* Gray box */
+.flashbox_gray
+{
+	border:1px solid #c5c5c7;
+	background-color:#e9e9ed;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:0.8em;
+	padding:10px;
+}
+
+/* Gray box with picture */
+.flashbox_gray_picture
+{
+	border:1px solid #c5c5c7;
+	background-color:#e9e9ed;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:0.8em;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:10px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* Contextual zone */
+/*----------------------------------------------------------------------------*/
+/* Common box : blue with border */
+.contextbox_blue
+{
+	width:150px;
+	border:1px solid #D0D0D0;
+	background:#EAEDF6;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+}
+
+/* Common box : blue with border, centered content */
+.contextbox_blue_centered
+{
+	width:150px;
+	border:1px solid #D0D0D0;
+	background:#EAEDF6;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+	text-align:center;
+}
+
+/* Box "text-picture" blue with border and picture on left */
+.banner_txtpicture
+{
+	width:150px;
+	border:1px solid #D0D0D0;
+	background :#EAEDF6;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:x-small;
+	padding:2px;
+	vertical-align :middle;
+}
+
+/* No background box with border */
+.contextbox_nobg
+{
+	width:150px;
+	border:1px solid #D0D0D0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+}
+
+/* Box without border, no background */
+.contextbox_freetxt
+{
+	width:150px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	padding:5px;
+}
+
+.contextbox_banners
+{
+	width:150px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+
+/*----------------------------- In box elements -----------------------------*/
+/* Item lists */
+
+.contextbox ul 
+{
+	padding: 0 0 0 30px;
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.contextbox li 
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:black;
+	list-style-image:   url("../img/bullet_context.gif");
+}  
+
+/* Links where weight = normal */
+a.contextbox_lnk
+{	
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;	
+	text-decoration :none;	
+	color:#000000;
+}
+a.contextbox_lnk:hover
+{	
+	font-family:Arial, Helvetica, sans-serif;	
+	font-weight :normal;	
+	color:#000000;	
+	text-decoration :underline;
+}
+
+/* Links where weight = bold */
+a.bold_contextbox_lnk
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight :bold;	
+	text-decoration :none;	
+	color:#000000;
+}
+a.bold_contextbox_lnk:hover	
+{
+	font-family:Arial, Helvetica, sans-serif;	
+	font-weight :bold;	
+	color:#000000;	
+	text-decoration :underline;
+}
+
+/* Title */
+.contextbox_title		
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+/*----------------------------------------------------------------------------*/
+/*    Buttons    */
+/*----------------------------------------------------------------------------*/
+
+/* Button customization */
+.button 
+{		
+	border:1px solid #C5C5C7;  
+	font-size:small; 
+	font-family:Arial, Verdana, sans-serif; 
+	background-color:#C2C5D7
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* Standard content */
+/*----------------------------------------------------------------------------*/
+/* Textual content */
+.box_content_txt
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size: 0.8em;
+	border-width:1px;
+	border-color:#c5c5c7;
+	border-right-style:solid;
+	border-left-style:solid;
+	border-bottom-style:solid;
+	padding-left:10px;
+	padding-bottom:15px;
+	padding-right:10px;
+}
+
+/* Title */
+.title
+{
+	font-family:Verdana, Helvetica, sans-serif;
+	color:#000000;
+	font-size:medium;
+	font-weight:bold;
+}
+
+/* Title (with link) */
+a.newstitle_lnk
+{
+	font-family:Verdana, Helvetica, sans-serif;
+	color:#000000;
+	font-size:medium;
+	font-weight:bold;
+	text-decoration:none;
+}
+a.newstitle_lnk:hover
+{
+	font-family:Verdana, Helvetica, sans-serif;
+	color:#000000;
+	font-size:medium;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+/* Black link (valid for all EI's) */
+
+a.blacklink
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:0.75em;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.blacklink:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-weight:normal;
+	text-decoration:underline;
+}
+a.blacklink_light
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.blacklink_light:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:underline;
+}
+
+/* Blue link (valid for all EI's) */
+
+a.bluelink
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#02519C;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.bluelink:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#02519C;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:underline;
+}
+a.bluelink_small
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#02519C;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.bluelink_small:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#02519C;
+	font-size:small;
+	font-weight:normal;
+	text-decoration:underline;
+}
+
+
+/* Item lists */
+/* Title */
+.List_title
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:bold;
+}
+
+a.List_title_lnk
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:bold;
+	text-decoration:none;
+}
+a.List_title_lnk:hover
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+/* Inpage elements  */
+/* Introduction */
+.inpage_intro
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:bold;
+}
+
+/* Small size annotation */
+.inpage_annotation
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:0.85em;
+}
+
+/* References bloc in pages */
+.references_bloc
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:bold;
+	font-style:italic;
+}
+
+/*----------------------------------------------------------------------------*/
+/* NOTE : The following CSS elements are only used by the PRESS SERVICE */
+/*----------------------------------------------------------------------------*/
+/* Release infos for the News Boxes */
+/* Theme */
+.theme_all
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+}
+
+/* Date */
+.release_date
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+}
+
+/* Time */
+.release_time
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-size:small;
+}
+
+/* Update */
+.update
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#02519C;
+	font-size:0.7em;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* Error message */
+/*----------------------------------------------------------------------------*/
+
+.error
+{
+	border:1px solid #FF0000;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FF0000;
+	font-size:0.8em;
+	padding:5px;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* CRITERIA ZONE */
+/*----------------------------------------------------------------------------*/
+.criteriazonebottom {
+    border-right:1px solid #c5c5c7;
+    border-left:1px solid #c5c5c7;
+    border-bottom:1px solid #c5c5c7;
+    background-image: url("../img/list_gradient_bottom.gif");
+    background-position:top; 
+}
+
+.criteriazonetop {
+	 border-left:1px solid #c5c5c7;
+	 font-family:Arial, Helvetica, sans-serif;
+	 font-size: 0.7em;
+	 color:#000000;
+	 padding-left:5px;
+	 padding-right:5px;
+	 background-image: url("../img/list_gradient_top.gif");
+	 background-position:top; 
+}
+
+.criteriazone_button {
+	 padding-left:5px;
+	 background-image: url("../img/list_gradient_top.gif");
+	 background-position:top; 
+}
+
+.criteriazoneneutral {
+	 border-right:1px solid #c5c5c7;
+	 padding-left:5px;
+	 background-image: url("../img/list_gradient_top.gif");
+	 background-position:top;
+}
+
+.criteriazone_field {
+	 padding-left:5px;
+	 font-size: 0.7em;
+	 background-image: url("../img/list_gradient_top.gif");
+	 background-position:top; 
+}
+
+.criteriazone {
+  border-left:1px solid #c5c5c7;
+  border-right:1px solid #c5c5c7;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  color:#000000;
+  padding-left:5px;
+  padding-right:5px;
+  background-image: url("../img/list_gradient_top.gif");
+  background-position:top; 
+}
+
+/*----------------------------------------------------------------------------*/
+/*    LIST STYLES  */
+/*----------------------------------------------------------------------------*/
+.contentdark{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	padding-left:5px;
+	padding-right:5px;
+	background-color:#EEEBE6;
+	height:1%;
+}
+
+.contentlight{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	padding-left:5px;
+	padding-right:5px;
+	background-color:#F9F8F6;
+	height:1%;
+}
+
+/*----------------------------------------------------------------------------*/
+/* FORM STYLES */
+/*----------------------------------------------------------------------------*/
+
+.table_form{
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+	border-bottom:2px solid #EEEBE6;
+	background-color:#F9F8F6;
+	color:#000000;
+	padding:7px;
+	}
+	
+.table_form_left{
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+	font-weight: bold;
+	border-bottom:2px solid #DBD6C2;
+	background-color:#EEEBE6;
+	color:#000000;
+	padding:7px;
+}
+
+.table_form_end{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+	background-color:#EEEBE6;
+	color:#000000;
+	font-weight: bold;
+	padding:7px;
+}
+.form_asteric{
+color:#FF0000;
+font-weight: bold;
+font-size:1em;
+}
+
+.bold{
+font-weight: bold;
+}
+.italic{
+font-style:italic;
+}
+ 
+.sup{
+vertical-align:super;
+font-size:0.8em;
+}
+ 
+.sub{
+vertical-align:sub;
+font-size:0.8em;
+}
+
+.underline{
+font-style:italic;
+font-weight: bold;
+}
+
+.highlight{
+background-color:#C0C0C0;
+}
+
+/*----------------------------------------------------------------------------*/
+/* LANGUAGE MINI-BOXES 														  */
+/*----------------------------------------------------------------------------*/
+
+#lgbox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #02519C;
+	background-color: #FFFFFF;
+	padding: 0px 2px 0px 2px;
+	text-decoration:none;
+}
+
+#lgbox a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #02519C;
+	background-color: #FFFFFF;
+	border: 1px solid #02519C;
+	padding: 0px 2px 0px 2px;
+	text-decoration:none;
+}
+#lgbox a:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #02519C;
+	background-color: #CED9ED;
+	border: 1px solid #02519C;
+	padding: 0px 2px 0px 2px;
+	text-decoration:none;
+}
+
+/* CNZ multi vignette */
+.multinails {
+    display: block;
+    padding: 0;
+    margin: 0 0 5px;
+}
+
+.multinails ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;	
+    list-style-image: none;      
+}
+
+.multinails ul>li:FIRST-CHILD {
+	height: 32px;        
+}
+
+.multinails ul a {
+    display: block;
+    height: 23px;
+}
+
+.multinails img {
+    margin : 0;
+}

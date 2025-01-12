@@ -1,0 +1,235 @@
+
+/********** ReaderView General Theme **********/
+.rv-body {}
+/********** ReaderView General Theme **********/
+
+/********** ReaderView Custom Theme **********/
+.rv-custom-theme{
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+.rv-custom-theme,
+.rv-custom-theme #rv-body h1,
+.rv-custom-theme #rv-body h2,
+.rv-custom-theme #rv-body h3,
+.rv-custom-theme #rv-body h4,
+.rv-custom-theme #rv-body h5,
+.rv-custom-theme #rv-body h6,
+.rv-custom-theme #rv-body ul li, 
+.rv-custom-theme #rv-body ol li,
+.rv-custom-theme i,
+.rv-custom-theme #rv-body p {
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.rv-custom-theme .rv-header-color {
+}
+
+.rv-custom-theme .rv-bottom-color {
+}
+
+/********** ReaderView Custom Theme **********/
+
+/********** ReaderView Light Theme **********/
+.rv-white-theme {
+  background-color: #fff;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+.rv-white-theme #rv-body {
+  background-color:#fff; 
+}
+.rv-white-theme,
+.rv-white-theme #rv-body h2,
+.rv-white-theme #rv-body h3,
+.rv-white-theme #rv-body h4,
+.rv-white-theme #rv-body h5,
+.rv-white-theme #rv-body h6,
+.rv-white-theme #rv-body ul li, 
+.rv-white-theme #rv-body ol li,
+.rv-white-theme i,
+.rv-white-theme #rv-body p {
+  color: #4d4d4f;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.rv-white-theme .rv-header-color {
+    background-color: #fff;
+    color:#999;
+  /*  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;*/
+}
+.rv-white-theme .rv-bottom-color {
+    background-color: #fff;
+    color:#999;
+    -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+.rv-white-theme .rv-post-title { color:#4d4d4f; }
+.rv-white-theme #readerview-tools a i { color:#a3a3a3; }
+
+.rv-white-theme #rv-body h1 { color:#3d3d3f; }
+.rv-white-theme a {color:#1eb77f;}
+
+.rv-white-theme .readerview-post-tags > a {
+  background-color: #fff;
+  color: #3d3d3f;
+}
+.rv-white-theme .readerview-post-tags > a:hover {
+  background-color: #1eb77f;
+  color: #fff;
+}
+
+.rv-white-theme ul.rv-response-posts li .rv-response-post-head a:hover{ color:#1eb77f; }
+.rv-white-theme .rv-nextprev-post-content .post-direction .title:hover{ color:#1eb77f; }
+.rv-white-theme ul.rv-related-posts li .rv-related-post-head a:hover{ color:#1eb77f; }
+/*Zille Likes*/
+.rv-white-theme .rv-bottom-content .zilla-likes:hover, .rv-white-theme .rv-bottom-content .zilla-likes.active {
+  color: #1eb77f !important;
+}
+.rv-white-theme .rv-bottom-content .zilla-likes {
+  color: #b2b2b4 !important;
+}
+
+.rv-white-theme .rv-bottom-content i.fa-comment-o, .rv-white-theme .rv-bottom-content i.fa-twitter, .rv-white-theme .rv-bottom-content i.fa-facebook{
+  color: #b2b2b4 !important;
+}
+.rv-white-theme .rv-bottom-content a:hover i{
+  color: #1eb77f !important;
+}
+.rv-white-theme .rv-separator {
+    background-color: rgba(0,0,0,.15);
+}
+.rv-white-theme .rv-avatar-text {color:#666666;}
+.rv-white-theme #rv-post-prev, .rv-white-theme #rv-post-next { background-color: #dddddd; color:#e0e0e0;  }
+/********** ReaderView Light Theme **********/
+
+
+/********** ReaderView Dark Theme **********/
+
+.rv-dark-theme {
+  background-color: #3d3d3f;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+.rv-dark-theme a {color:#1eb77f;}
+.rv-dark-theme,
+.rv-dark-theme #rv-body h1,
+.rv-dark-theme #rv-body h2,
+.rv-dark-theme #rv-body h3,
+.rv-dark-theme #rv-body h4,
+.rv-dark-theme #rv-body h5,
+.rv-dark-theme #rv-body h6,
+.rv-dark-theme #rv-body ul li, 
+.rv-dark-theme #rv-body ol li,
+.rv-dark-theme i,
+.rv-dark-theme #rv-body p {
+  color: #b3b3b1;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.rv-dark-theme .rv-header-color {
+    background-color: #3d3d3f;
+    color:#b3b3b1;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.rv-dark-theme .rv-bottom-color {
+    background-color: #3d3d3f;
+    color:#b3b3b1;
+    -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.rv-dark-theme .rv-options:before {
+  border-top:10px solid #3d3d3f;
+}
+
+/* Tags */
+.rv-dark-theme .readerview-post-tags > a {
+  color:#3d3d3f;
+  background-color: #e9e9e9;
+}
+.rv-dark-theme .readerview-post-tags > a:hover {
+  background-color: #1eb77f;
+  color:#fff;
+}
+
+.rv-dark-theme .rv-search-form input::-webkit-input-placeholder {
+  color:#b3b3b1 !important;
+}
+/* Box */
+.rv-dark-theme .rv-related-posts-content, .rv-dark-theme .rv-nextprev-post-content, .rv-dark-theme .rv-response-posts-content {
+  background-color:#3d3d3f;
+  border:none;
+}
+.rv-dark-theme ul.rv-related-posts li .rv-related-post-head a, .rv-dark-theme ul.rv-response-posts li .rv-response-post-head a, .rv-dark-theme .rv-nextprev-post-content .title, .rv-dark-theme .rv-comment{
+  color:#b3b3b1;
+}
+
+.rv-dark-theme ul.rv-related-posts li .rv-related-post-head a:hover, .rv-dark-theme ul.rv-response-posts li .rv-response-post-head a:hover, .rv-dark-theme .rv-nextprev-post-content .post-direction .title:hover {
+  color:#e0e0e0;
+}
+.rv-dark-theme ul.rv-related-posts li, .rv-dark-theme ul.rv-response-posts li, .rv-dark-theme .rv-border-right{
+  border-color:#2d2d2f;
+}
+
+.rv-dark-theme .rv-show-all-comment {
+  background-color: #2d2d2f;
+  border-color: #3d3d3f;
+}
+
+.rv-dark-theme .rv-show-all-comment a:hover{
+  color:#e0e0e0 !important;
+}
+.rv-dark-theme a.rv-avatar {
+  color:#b3b3b1;
+}
+.rv-dark-theme span#readerview-like a{
+  color:#b3b3b1; 
+}
+.rv-dark-theme .rv-bottom-color a:hover, .rv-dark-theme .rv-bottom-color a:hover i {
+ color:#e0e0e0 !important;
+}
+.rv-dark-theme #rv-ads-content #rv-ads-close, .rv-dark-theme #rv-ads-content #rv-ads-close i {
+  color:#fff;
+}
+.rv-dark-theme #rv-ads-content img {
+  border: 3px solid #343437;
+}
+.rv-dark-theme #rv-post-prev, .rv-dark-theme #rv-post-next { background-color: #323234; color:#e0e0e0;  }
+/********** ReaderView Dark Theme **********/

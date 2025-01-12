@@ -1,0 +1,425 @@
+// Ouvrir un document dans une autre fenetre et lui donner le focus
+// Cela pose un probleme pour le PDF dans IExplorer 6 (Erreur JavaScript et pas de focus)
+// Cela pose un probleme pour le WORD dans IExplorer 7 (Impossible d'ouvrir deux Word de suite)
+// De plus, IExplorer 7 ouvre systematiquement une nouvelle fenetre vide pour chaque WORD
+// Donc, les XML s'ouvrent dans une autre fenetre et c'est toujours la meme (SipadeDocWindow)
+//       les PDF s'ouvrent dans une autre fenetre, chaque fois differente
+//       les WORD s'ouvrent dans la meme fenetre
+// Par defaut, le document s'ouvre dans la fenetre SipadeDocWindow.
+// Cela regle le probleme des acces via le triplet pour lesquels on a pas le format.
+function SipadeDocWindow(url) {
+    if (url.indexOf("WORD") != -1) {
+        window.location = url;
+    } else {
+        var windowName = "";
+        if (url.indexOf("PDF") != -1) {
+            windowName = "";
+        } else {
+            windowName = "SipadeDocWindow";
+        }
+        w = window.open(url, windowName,'width=1010, height=700, left=150, top=0, toolbar=yes, resizable=yes, scrollbars=yes, menubar=yes, location=yes, status=yes, directories=yes');
+        w.focus();
+    }
+}
+
+// Ouvrir un document dans une autre fenetre et lui donner le focus
+// Cette fonction est a utiliser pour les documents de la presse
+// Quand il faut ouvrir un url dans une fenetre differente de la fenetre courante
+function SipadeDocWindow2(url) {
+    windowName = "SipadeDocWindow2";
+    w = window.open(url, windowName,'width=850, height=700, left=175 top=25, toolbar=yes, resizable=yes, scrollbars=yes, menubar=yes, location=yes, status=yes, directories=yes');
+    w.focus();
+}
+
+// Ouvrir la VOD dans une autre fenetre et lui donner le focus
+function SipadeVodWindow(url) {
+        windowName = "SipadeVodWindow";
+        w = window.open(url, windowName,'width=978, height=620, left=50, top=50, toolbar=no, resizable=yes, scrollbars=no, menubar=no, location=yes, status=no, directories=no');
+        w.focus();
+}
+
+// Routine qui gere le display + et - pour l'annexe du CRE
+function toggleCRE(div, img) {
+  if (document.getElementById) { // IE5+/NS6+
+    theDiv = document.getElementById(div);
+    theImg = document.getElementById(img);
+  } else if (document.all) { // IE4+
+    theDiv = document.all(div);
+    theImg = document.all(img);
+  }
+  if (theDiv.style.display == "none") {
+    theDiv.style.display = "";
+    theDiv.style.color = "black";
+    theImg.src = "/doceo/data/img/less.gif"
+  } else {
+    theDiv.style.display = "none";
+    theImg.src = "/doceo/data/img/more.gif"
+  }
+}
+
+// Routine qui gere le display + et - pour les points de level 2 dans l'heure des votes des PV 
+function toggleVOTE(div, img) {
+  if (document.getElementById) { // IE5+/NS6+
+    theDiv = document.getElementById(div);
+    theImg = document.getElementById(img);
+  } else if (document.all) { // IE4+
+    theDiv = document.all(div);
+    theImg = document.all(img);
+  }
+  if (theDiv.style.display == "none") {
+    theDiv.style.display = "";
+//    theDiv.style.color = "black";
+    theImg.src = "/doceo/data/img/less.png"
+  } else {
+    theDiv.style.display = "none";
+    theImg.src = "/doceo/data/img/more.png"
+  }
+}
+
+// Routine qui gere le display + et - dans le SEI plenary
+function togglePlenary(div, img) {
+   if (document.getElementById) { // IE5+/NS6+
+    theDiv = document.getElementById(div);
+    theImg = document.getElementById(img);
+   } else if (document.all) { // IE4+
+    theDiv = document.all(div);
+    theImg = document.all(img);
+   }
+   if (theDiv.style.display == "none") {
+         theDiv.style.display = "";
+         theDiv.style.color = "black";
+         theImg.src = "/doceo/data/img/sort_down.gif"
+     } else {
+         theDiv.style.display = "none";
+         theImg.src = "/doceo/data/img/sort_no.gif"
+     }
+}
+
+// NAVIGATION ETENDUE : Routine qui permet de changer d'anneau actif
+function changeRing(frm){
+  	var newIndex = frm.elements[curSelName].options.selectedIndex + 1;
+    	var newSelName = "selectA"+newIndex;
+	
+	frm.elements[newSelName].options.selectedIndex=newIndex-1;
+	viewRing(newIndex);
+  	
+  	// pointer vers l'ancre d'une intervention
+ 	if (URLring[newIndex-1]) window.location.href=URLring[newIndex-1];  
+	
+}
+
+// NAVIGATION ETENDUE : Routine qui permet de visualiser un anneau particulier
+function viewRing(RingId) {
+  	var selectedId; 
+  	curSelName="selectA"+RingId;
+	for (i=1; i<=NbRing; i++){
+		selectedId= "A"+i;
+		if (i==RingId) 	document.getElementById(selectedId).style.display = "block";
+		
+		else		document.getElementById(selectedId).style.display = "none";
+	}
+}
+
+/// START SCRIPT POUR NEWS (Themes) 
+
+var idSave="";
+
+/////////////////////
+////    
+////    Appel :  user click sur l'icone 'plus' ou 'moins'  ou sur le link
+////  Action : permet de deployer/de fermer un theme business et de voir ses themes
+////
+/////////////////////
+
+ function toggle(id) {    
+    
+    if (idSave!="" && idSave!=id ){
+           changeStatus (idSave);
+    }
+   
+    changeStatus (id);
+   
+}
+
+
+/////////////////////
+////
+//// Action : permet de deployer/de fermer un th?me business et de voir ses th?mes
+////
+/////////////////////
+function changeStatus (id){
+
+
+if (document.getElementById) 
+  {
+    theTdBusiness = document.getElementById("idCode"+id);
+    theImg = document.getElementById("img"+id);
+    theTD= document.getElementById("topicBusinessId"+id);
+    theCheckBox=document.getElementById("checkBoxBusiness"+id);
+
+
+
+  }
+  
+
+  if (theTdBusiness.style.display == "none") 
+  {
+    theTdBusiness.style.display = "";   
+    theCheckBox.style.display="";
+    theImg.src = "/doceo/data/img/sort_down.gif";
+    theImg.alt= getTitle(0);
+    theImg.title=getTitle(0);
+    theTD.className="highlightlist";
+    
+    idSave=id;
+    if (document.getElementById("idBusiness")) //(function expandTopic) Pour garder le topic business (expand)
+       document.getElementById("idBusiness").value=id   ;
+    
+  } 
+  else 
+  {
+    theTdBusiness.style.display = "none";
+    theCheckBox.style.display="none";
+    theImg.src = "/doceo/data/img/sort_no.gif";
+    theImg.alt=getTitle(1);
+    theImg.title=getTitle(1);
+
+    theTD.className="listcontentlight_left";
+    unSelectThemesAndThemesBusiness(id); 
+    if (document.getElementById("idBusiness")) //(function expandTopic) Pour garder le topic business (expand)
+       document.getElementById("idBusiness").value=0;
+   
+    idSave="";
+  }
+
+}
+////
+// Action : Permet de faire un expand du topic business lors d'une recherche non fructueuse
+////
+function expandTopic(id)
+{  
+
+    theTdBusiness = document.getElementById("idCode"+id);
+    theImg = document.getElementById("img"+id);
+    theCheckBox=document.getElementById("checkBoxBusiness"+id);
+    
+    theCheckBox.style.display="";   
+    
+    theTD= document.getElementById("topicBusinessId"+id);
+    theTdBusiness.style.display = "";       
+    theImg.src = "/doceo/data/img/sort_down.gif";
+    theImg.alt= getTitle(0);
+    theImg.title=getTitle(0);
+    theTD.className="highlightlist";
+    
+    idSave=id;
+}
+//////////////////// 
+////
+//// Appel :  user click sur l'icone 'moins' pour fermer le Th?me Business
+//// Action :  lorsque le user ferme un Th?me Business ,  la checkBox Th?me Business est d?coch? et idem pour ses Th?mes
+////
+//////////////////// 
+
+function unSelectThemesAndThemesBusiness(id)
+{
+
+     theElementTd = document.getElementById("idCode"+id); // Recupere l'element TD 
+     checkBoxesThemesTD(theElementTd,false); // changer les valeurs des checkBoxes des Th?mes
+
+     if (document.getElementById) { //   Decocher le Theme Business
+          checkBoxBusiness = document.getElementById("checkBoxBusiness"+id); 
+          checkBoxBusiness.checked=false;
+      }
+
+  
+}
+
+
+//////////////////// 
+////
+//// Appel : user click sur la checkBox d'un th?me dans l'element TD
+//// Action (V?rifiaction des checkBox des th?mes):
+////          - Si tous les th?mes d'un Th?me Business sont coch?s -> on coche le th?me business
+////    - Si un des th?mes n'est pas s?lectionn? , -> on d?coche le th?me business
+//////////////////// 
+function selectTheme(thisCheckBox,td,themeBusiness)
+{
+ 
+ 
+  checkBoxBusiness = document.getElementById(themeBusiness);  // Recupere la checkBox Th?meBusiness
+  checkBoxBusiness.checked=checkThemesCheckBox(td);       // V?rification des valeurs des CheckBox des Th?mes du Th?me Buisness  et
+                                          //  changer la valeur du Th?me Buisness
+}
+
+//////////////////// 
+////
+////  Action:  coche/d?coche les Th?mes
+////
+//////////////////// 
+
+function checkBoxesThemesTD(theElementTd,value)
+{ 
+  if (theElementTd!=null){
+        checkBoxes=theElementTd.getElementsByTagName("input"); // recupere les elements input du type checkBoxes de l'element TD
+
+        for (i=0;i<checkBoxes.length;i++)
+        {
+         checkBoxes[i].checked=value; 
+        }
+   }
+}
+
+//////////////////// 
+////
+////  Appel : user click sur la checkBox theme business
+////  Action : soit coche/decoche les Themes du Theme Business
+////
+//////////////////////
+function selectThemeBusiness(checkBoxThemeBusiness,tdId)
+{
+      
+  if (document.getElementById) {
+     value=checkBoxThemeBusiness.checked; // Theme Business
+     theElementTd = document.getElementById("idCode"+tdId); // Recupere l'element TD 
+     checkBoxesThemesTD(theElementTd,value); // changer les valeurs pour les checkBoxes des Th?mes
+   
+  }
+
+}
+//////////////////// 
+////
+////  Action : Determine si tous les checkbox (des themes du theme business) sont toutes selectionnees
+////  
+//////////////////// 
+function checkThemesCheckBox(td)
+{
+   var status=true;
+   if (document.getElementById) {
+     theTd= document.getElementById(td);  // recupere l'element TD  qui contient les checkBox des Themes
+     if (theTd!=null){
+        checkBoxes=theTd.getElementsByTagName("input");
+        for (i=0;i<checkBoxes.length;i++)
+        {  
+           if  (checkBoxes[i].checked == false)
+                 return false ;
+        }
+
+     }
+ }  
+return status; 
+
+}
+
+
+
+ 
+
+/// END SCRIPT POUR NEWS (Themes) 
+
+
+/// START SCRIPT  POUR NEWS PRODUCT TYPE
+
+function selectAllProduct(product){
+  
+     if (document.getElementById) {
+       theTd= document.getElementById(product);  // recupere la table  qui contient les checkBox des types de produit
+        if (theTd!=null){
+            checkBoxes=theTd.getElementsByTagName("input");
+            for (i=0;i<checkBoxes.length;i++)
+              {  
+                  checkBoxes[i].checked = true ;
+              }
+            
+             
+         }
+
+      }
+
+ }
+ function selectNoneProduct(product){
+  
+     if (document.getElementById) {
+       theTd= document.getElementById(product);  // recupere la table  qui contient les checkBox des types de produit
+        if (theTd!=null){
+            checkBoxes=theTd.getElementsByTagName("input");
+            for (i=0;i<checkBoxes.length;i++)
+              {  
+                  checkBoxes[i].checked = "" ;
+              }
+            
+             
+         }
+
+      }
+
+ }
+/// END SCRIPT POUR NEWS PRODUCT TYPE
+
+/// START POUR NEWS ARCHIVE LIMITE TAILLE POUR AFFICHAGE DE LA LISTE DE CRITERE
+function changeDisplay(id1,id2, id3,id4) {
+
+ if (document.getElementById(id1))
+     document.getElementById(id1).style.display = "inline";
+
+ if (document.getElementById(id2))
+     document.getElementById(id2).style.display = "inline";
+
+
+ if (document.getElementById(id3))
+      document.getElementById(id3).style.display = "none";
+
+ if (document.getElementById(id4))
+      document.getElementById(id4).style.display = "inline";
+
+}
+/// END POUR NEWS ARCHIVE LIMITE TAILLE POUR AFFICHAGE DE LA LISTE DE CRITERE
+
+/// START POUR OJ-SCHED : affichage des onglets
+function viewTab(name, tabModel) {
+    switch (tabModel) { 
+	case 'ST':   nonViewableTab('PT');
+		     nonViewableTab('ST');
+		     break;
+	case 'DL': 
+		     nonViewableTab('PT');
+		     nonViewableTab('DL');
+		     break;
+	case 'STDL': 
+		     nonViewableTab('PT');
+		     nonViewableTab('ST');
+		     nonViewableTab('DL');
+		     break;
+	default:  nonViewableTab('PT');
+		  break;
+     }
+     viewableTab(name);
+}
+
+function viewableTab(name){
+	if (document.getElementById) { // IE5+/NS6+
+        theView = document.getElementById("View"+ name);
+        theTab = document.getElementById("Tab"+ name);
+      } else if (document.all) { // IE4+
+        theView = document.all("View"+ name);
+        theTab = document.all("Tab"+ name);
+      }
+     theView.style.display = "";
+	 theView.style.color = "black";
+     theTab.style.display = "";
+	 theTab.style.color = "black";
+}
+
+function nonViewableTab(name){
+     if (document.getElementById) { // IE5+/NS6+
+        theView = document.getElementById("View"+ name);
+        theTab = document.getElementById("Tab"+ name);
+      } else if (document.all) { // IE4+
+        theView = document.all("View"+ name);
+        theTab = document.all("Tab"+ name);
+      }
+         theView.style.display = "none";
+         theTab.style.display = "none";
+}
+/// END POUR OJ-SCHED : affichage des onglets
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://crd.gov.pl/xml/schematy/UPO/2008/05/09/UPO.xsl"?><pos:Dokument xmlns:pos="http://crd.gov.pl/xml/schematy/UPO/2008/05/09/" xmlns:str="http://crd.gov.pl/xml/schematy/struktura/2008/05/09/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crd.gov.pl/xml/schematy/UPO/2008/05/09/ http://crd.gov.pl/xml/schematy/UPO/2008/05/09/schemat.xsd">
+    <pos:OpisDokumentu>
+        <str:CID>2aec0225ac8fcc1088be5af7a3d73e87fddadc57@epuap.gov.pl</str:CID>
+    </pos:OpisDokumentu>
+    <pos:UPD>
+        <pos:IdentyfikatorPoswiadczenia>ePUAP-UPD128146088</pos:IdentyfikatorPoswiadczenia>
+        <pos:PodmiotWystawiajacyPoswiadczenie>
+            <pos:Nazwa>URZĄD MIASTA WODZISŁAWIA ŚLĄSKIEGO</pos:Nazwa>
+            <pos:IdentyfikatorPodmiotu TypIdentyfikatora="ePUAP-ID">umwodzislaw</pos:IdentyfikatorPodmiotu>
+        </pos:PodmiotWystawiajacyPoswiadczenie>
+        <pos:Adresat>
+            <pos:Nazwa>RYSZARD CZEKAJ</pos:Nazwa>
+            <pos:IdentyfikatorPodmiotu TypIdentyfikatora="ePUAP-ID">70020307751</pos:IdentyfikatorPodmiotu>
+        </pos:Adresat>
+        <pos:DataOdbioru>2025-01-11</pos:DataOdbioru>
+        <pos:DataUtworzeniaPoswiadczenia>2024-03-19T07:54:46.675</pos:DataUtworzeniaPoswiadczenia>
+        <pos:IdentyfikatorSprawy>WI.1334.7.2024</pos:IdentyfikatorSprawy>
+        <pos:IdentyfikatorDokumentu>KW-028945/24</pos:IdentyfikatorDokumentu>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Źródło">Poświadczenie wystawione przez platformę ePUAP</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Identyfikator ePUAP dokumentu">182598373</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Identyfikator zlecenia doręcznia">ZD-11154285</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Identyfikator zlecenia doręczenia">11154285</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Typ zawiadomienia">Zawiadomienie powtórne</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Identyfikator UPD">128146088</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Data utworzenia pierwszego UPD">2024-03-19T07:54:46.709</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Data utworzenia powtórnego UPD">2024-03-27T00:00:36.326</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Termin doręczenia">2024-04-02T23:59:59.999</pos:InformacjaUzupelniajaca>
+        <pos:InformacjaUzupelniajaca TypInformacjiUzupelniajacej="Informacja o warunkach uznania dokumentu za doręczony">Dokument nieodebrany przez Adresata w okresie 14 dni od wysłania pierwszego UPD zgodnie z art. 46 par. 6 k.p.a., w związku z art. 158 ust. 1 ustawy o doręczeniach elektronicznych, uznaje się za doręczony.</pos:InformacjaUzupelniajaca>
+    </pos:UPD>
+<ds:Signature Id="id-0062706aeb60cc603b2d7a2aa62cfe72" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="ID-a6b6fd402fcfb39f7a6d4bc4571aa943" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116"><ds:XPath>not(ancestor-or-self::ds:Signature)</ds:XPath></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>nraBg5aX0M/BibyoJVK4n45nQMHcIQkLJU//adLowHI=</ds:DigestValue></ds:Reference><ds:Reference Id="ID-2bccdd3ac4a58cf503042ce7b836c452" URI="Pismo%20ogolne.xml"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116"><ds:XPath>not(ancestor-or-self::*[local-name() = 'UnsignedProperties' and namespace-uri() = 'http://uri.etsi.org/01903/v1.3.2#'])</ds:XPath></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>xu7mCgihCel/Zv81/0K4pcKg2QhXU6Mr2qU8P4y8MGA=</ds:DigestValue></ds:Reference></ds:SignedInfo></ds:Signature></pos:Dokument>

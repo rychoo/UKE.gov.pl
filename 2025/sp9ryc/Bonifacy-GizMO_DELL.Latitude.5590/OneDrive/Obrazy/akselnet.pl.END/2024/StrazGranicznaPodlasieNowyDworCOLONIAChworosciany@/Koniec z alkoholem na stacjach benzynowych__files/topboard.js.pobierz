@@ -1,0 +1,44 @@
+const topboardStickyThreshold = 1200;
+const stickyTopboardClass = "sticky-topboard";
+let top0 = document.getElementById("top_0");
+let m_top0 = document.getElementById("m_top_0");
+
+const initStickyTopboard = () => {
+  setCommonStyles();
+  handleStickyTopboard();
+};
+
+const setCommonStyles = () => {
+  [top0, m_top0].forEach((el) => {
+    if (!el) return;
+    el.style.zIndex = 9999000;
+    el.style.backgroundColor = "white";
+  });
+};
+
+const setStaticStyles = (el) => {
+  el.style.position = "static";
+  el.style.top = null;
+};
+
+const setStickyStyles = (el) => {
+  el.style.position = "fixed";
+  el.style.top = "0px";
+};
+
+const handleStickyTopboardByElement = (el) => {
+  if (!el) return;
+  if (window.scrollY <= 0 || window.scrollY > topboardStickyThreshold)
+    setStaticStyles(el);
+  else setStickyStyles(el);
+};
+
+const handleStickyTopboard = () => {
+  handleStickyTopboardByElement(top0);
+  handleStickyTopboardByElement(m_top0);
+};
+
+if (document.readyState !== "loading") initStickyTopboard();
+else document.addEventListener("DOMContentLoaded", initStickyTopboard);
+
+window.addEventListener("scroll", handleStickyTopboard);

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Comarch//Event Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Przygotuj firmę na zmiany w prawie 2025
+DTSTART:20250115T090000Z
+DTEND:20250115T100000Z
+UID: 2025-01-12-09-17-40@events.comarch.com
+DTSTAMP:20250112T081740Z
+LOCATION:
+Description:Aby uzyskać więcej informacji, odwiedź stronę wydarzenia: https://events.comarch.com/erp/przygotuj-firme-na-zmiany-w-prawie-2025/ \n\n --------------------------------------------------------------------------- \nLokalny czas wydarzenia:\n2025.01.15 10:00 - 2025.01.15 11:00\nEurope/Warsaw(UTC+1)\n
+END:VEVENT
+END:VCALENDAR

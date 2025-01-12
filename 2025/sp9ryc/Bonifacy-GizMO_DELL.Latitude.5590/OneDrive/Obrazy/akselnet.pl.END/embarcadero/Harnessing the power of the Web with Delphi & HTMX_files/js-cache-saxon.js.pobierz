@@ -1,0 +1,22 @@
+/* Cache file created at 2024-05-17 15:47:37 */    (function($){
+    $(document).ready(function() {
+
+
+        $(function() {
+		$(".logo-link").attr("href", "https://www.embarcadero.com/");
+		$( ".header-topline" ).append('<div class="header-topline-button"><a href="https://getitnow.embarcadero.com/" class="btn btn-small btn-transparent" target="_blank">+ Discover GetIt *NEW*</a></div>');
+  $('html').filter('[lang*="en"]').each(function(){
+$('div').filter('[lang*="ja"]').hide();
+	});
+  $('html').filter('[lang*="ja"]').each(function(){
+$('div').filter('[lang*="en"]').hide();
+$('div').filter('[class*="header-topline-button"]').hide();
+	});
+  $('html').filter('[lang*="de"]').each(function(){
+$('div').filter('[lang*="en"]').hide();
+$('div').filter('[class*="header-topline-button"]').hide();
+	});		
+});
+    });
+    })(jQuery);
+     /*2024-05-17 15:47*//* JS Generator Execution Time: 0.00017094612121582 seconds */

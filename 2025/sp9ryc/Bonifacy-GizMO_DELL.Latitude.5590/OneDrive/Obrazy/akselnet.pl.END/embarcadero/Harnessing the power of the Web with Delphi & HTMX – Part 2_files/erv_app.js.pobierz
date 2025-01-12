@@ -1,0 +1,816 @@
+/*!
+ * jQuery Cookie Plugin v1.4.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD (Register as an anonymous module)
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS
+        module.exports = factory(require('jquery'));
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    var pluses = /\+/g;
+
+    function encode(s) {
+        return config.raw ? s : encodeURIComponent(s);
+    }
+
+    function decode(s) {
+        return config.raw ? s : decodeURIComponent(s);
+    }
+
+    function stringifyCookieValue(value) {
+        return encode(config.json ? JSON.stringify(value) : String(value));
+    }
+
+    function parseCookieValue(s) {
+        if (s.indexOf('"') === 0) {
+            // This is a quoted cookie as according to RFC2068, unescape...
+            s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+        }
+
+        try {
+            // Replace server-side written pluses with spaces.
+            // If we can't decode the cookie, ignore it, it's unusable.
+            // If we can't parse the cookie, ignore it, it's unusable.
+            s = decodeURIComponent(s.replace(pluses, ' '));
+            return config.json ? JSON.parse(s) : s;
+        } catch(e) {}
+    }
+
+    function read(s, converter) {
+        var value = config.raw ? s : parseCookieValue(s);
+        return $.isFunction(converter) ? converter(value) : value;
+    }
+
+    var config = $.cookie = function (key, value, options) {
+
+        // Write
+
+        if (arguments.length > 1 && !$.isFunction(value)) {
+            options = $.extend({}, config.defaults, options);
+
+            if (typeof options.expires === 'number') {
+                var days = options.expires, t = options.expires = new Date();
+                t.setMilliseconds(t.getMilliseconds() + days * 864e+5);
+            }
+
+            return (document.cookie = [
+                encode(key), '=', stringifyCookieValue(value),
+                options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                options.path    ? '; path=' + options.path : '',
+                options.domain  ? '; domain=' + options.domain : '',
+                options.secure  ? '; secure' : ''
+            ].join(''));
+        }
+
+        // Read
+
+        var result = key ? undefined : {},
+            // To prevent the for loop in the first place assign an empty array
+            // in case there are no cookies at all. Also prevents odd result when
+            // calling $.cookie().
+            cookies = document.cookie ? document.cookie.split('; ') : [],
+            i = 0,
+            l = cookies.length;
+
+        for (; i < l; i++) {
+            var parts = cookies[i].split('='),
+                name = decode(parts.shift()),
+                cookie = parts.join('=');
+
+            if (key === name) {
+                // If second argument (value) is a function it's a converter...
+                result = read(cookie, value);
+                break;
+            }
+
+            // Prevent storing a cookie that we couldn't decode.
+            if (!key && (cookie = read(cookie)) !== undefined) {
+                result[name] = cookie;
+            }
+        }
+
+        return result;
+    };
+
+    config.defaults = {};
+
+    $.removeCookie = function (key, options) {
+        // Must not alter options, thus extending a fresh object...
+        $.cookie(key, '', $.extend({}, options, { expires: -1 }));
+        return !$.cookie(key);
+    };
+
+}));
+
+
+(function ($) {
+
+    "use strict";
+
+    var readerview = $('div#readerview');
+    var readerviewstart = false;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = 60;
+    var navi = 0;
+    var rvad = $('div#rv-ads');
+    var readerviewMyscroll;
+    var rv_loading_obj = $('.readerview-double-bounce');
+    // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+    $(document).ready(function () {
+
+        if (erv.readerview_selector) {
+            $('.readerview-action').hide("fast");
+            $(erv.readerview_selector).find('.readerview-action').show("fast");
+        }
+
+        $("a#rv-post-prev").click(function(event) {
+            event.preventDefault();
+            reader_getpost('prev');
+        });
+
+        $("a#rv-post-next").click(function(event) {
+            event.preventDefault();
+            reader_getpost('next');
+        });
+
+        // Left/Right Next/Prev Post
+        readerview.touchwipe({
+             wipeLeft: function() { reader_getpost('next'); },
+             wipeRight: function() { reader_getpost('prev'); },
+             min_move_x: 60,
+             min_move_y: 60,
+             preventDefaultEvents: false
+        });
+
+
+        // Auto Load reaerview
+        if ( erv.auto_load_readerview == 'Enable'){
+
+            reader_install();   
+            reader_getpost( erv.auto_open_post_id );
+        }
+
+         // Scroll Fex
+        $('body.no-scroll-body').bind("touchmove", {}, function(event){
+            event.preventDefault();
+        });
+
+        // Action Readerview
+        $(document).on('click', '.readerview-action', function(event){
+
+             event.preventDefault();
+
+            // Not start readerview yet.
+            if ( !readerviewstart )
+                reader_install();
+
+            // Get Post
+            var post_id = $(this).data('readerviewid');
+            reader_getpost( post_id );
+        });
+
+        // Zilla Likes Fix
+        $(document).on('click', '#readerview-like a', function(event) {
+            event.preventDefault();
+            
+            setTimeout(function(){
+                rv_zilla_likes_init();
+            },500);
+            
+        });
+        
+
+        // Autosearchbar
+            $('#readerview-search').autocomplete({
+                serviceUrl: erv.ajax_url + '?action=erv_ajax_callback&mode=search_post',
+                minChars: 3,
+                onSelect: function (suggestion) {
+                    reader_getpost( suggestion.data );
+                }
+            }); 
+
+
+            // Change Theme
+            $('a.rv-change-theme').click(function(event) {
+                readerview.removeClass('rv-white-theme rv-dark-theme rv-custom-theme');
+                readerview.addClass($(this).data('theme'));
+
+                $('.rv-theme-options a').removeClass('selected');
+                $(this).addClass('selected');
+
+                // Set cookie
+                $.cookie('readerview-theme', $(this).data('theme'));
+            });
+            
+            
+            $(document).mouseup(function (e)
+            {   
+
+                if ( readerviewstart == true ){
+
+                   var container = $('.rv-options');
+
+                    if (!container.is(e.target) // if the target of the click isn't the container...
+                        && container.has(e.target).length === 0) // ... nor a descendant of the container
+                    {
+                        container.hide();
+                    }
+
+                }
+                
+            });
+
+            $(document).on('touchstart', function (e) {
+                
+                if ( readerviewstart == true ){
+
+                    var container = $('.rv-options');
+
+                    if (!container.is(e.target) // if the target of the click isn't the container...
+                        && container.has(e.target).length === 0) // ... nor a descendant of the container
+                    {
+                        container.hide();
+                    }
+                }
+            });
+
+            // Open Options
+            $(document).on('click', 'a#rv-change', function(event) {
+                event.preventDefault();
+                /* Act on the event */
+                $('.rv-options').toggle();
+            });
+
+            // Font Serif Options
+            $('.rv-font-options a').click(function(event) {
+                event.preventDefault();
+
+                $('.rv-font-options a').removeClass('selected');
+                $(this).addClass('selected');
+                
+                readerview.removeClass('rv-sanserif-font rv-serif-font');
+                readerview.addClass( $(this).data('rvfont') );
+
+                $.cookie('readerview-font', $(this).data('rvfont'));
+
+            });
+            
+
+            // Social Buttons
+            $(document).on('click', '#readerview-socials a', function(e){
+
+                if ($(this).attr('href')=='#' ) {
+                    alert('Ops No link');
+                    return false;
+                }
+
+                var link = encodeURIComponent($(this).attr('href'));
+                var social = $(this).data('rvsocial');
+
+
+                if (social != 'facebook') {
+                    var redicrect = 'http://twitter.com/share?&url=' + link
+                } else {
+                    var redicrect =  'http://www.facebook.com/sharer.php?u=' + link;
+                }
+                rv_PopupCenter(redicrect, social + '-share','600','400');  
+
+                e.preventDefault();
+
+            });
+
+            // Comment Click
+            $(document).on('click', 'a.rv-comments', function(e){
+                
+                if ( window.location.href == $(this).attr('href') ) {
+                 
+                    readerviewstart = false;
+                    $('html').removeClass('no-scroll-body');
+                    readerview.hide();
+                    rvad.hide();    
+                }
+                
+            });
+            // Search Form
+            $('.rv-search').on('click', function(e) {
+
+                if ( $(window).width() < 768 ) {
+                    $('#readerview-logo').hide();
+                }
+
+                $('.rv-post-title').fadeOut('fast',function () {
+                    $('.rv-search-form').fadeIn('fast');
+                });
+
+                $(this).fadeOut('fast', function() {
+                    
+                    $('.rv-search-close').fadeIn('slow');
+                    $('.rv-search-form input').focus();
+
+                });
+                e.preventDefault();
+
+                // Clear input
+                $('#readerview-search').val('');
+            });
+
+            $('.rv-search-close').on('click', function(e) {
+
+                $('.rv-search-form').fadeOut('fast',function () {
+                    if ( readerview.scrollTop() > (navbarHeight + 10) ) 
+                        $('.rv-post-title').fadeIn('fast');
+
+                    if ( $(window).width() < 768 ) {
+                        $('#readerview-logo').fadeIn("slow");
+                    }
+                });
+
+                $(this).fadeOut('fast', function() {
+                    $('.rv-search').fadeIn('slow');
+                });
+
+
+                e.preventDefault();
+            });
+            // Search Form
+
+            $('#rv_incfont').click(function(){
+                
+                var curSizeTitle = parseInt($('#rv-post-title').css('font-size')) + 1;
+                var curSize = parseInt($('#readerview-one-content').css('font-size')) + 2;
+
+                $('#rv-post-title').css('font-size', curSizeTitle);
+                rv_change_fontsize(curSize);
+
+                // cookie
+                $.cookie('readerview-font-size',curSize);
+                $.cookie('readerview-font-title-size',curSizeTitle);
+             });
+
+            $('#rv_decfont').click(function(){
+                var curSize = parseInt($('#readerview-one-content').css('font-size')) - 2;
+                var curSizeTitle = parseInt($('#rv-post-title').css('font-size')) - 1;
+                
+                $('#rv-post-title').css('font-size', curSizeTitle);
+                rv_change_fontsize(curSize);
+
+                // cookie
+                $.cookie('readerview-font-size',curSize);
+                $.cookie('readerview-font-title-size',curSizeTitle);
+            });
+
+            // Close ReaderView
+            $('.rv-close').click(function(event) {
+                readerviewstart = false;
+                $('html').removeClass('no-scroll-body');
+                readerview.hide();
+                
+                rvad.hide();
+            });
+
+            // Ads Close
+            $('#rv-ads-close').click(function(event) {
+                rv_animate( rvad, 'animated ' + erv.ads_close_anim, 'hide');
+
+                // Set cookie
+                if ( erv.reopen_time > 0)
+                {
+                    // Set Close cookie
+                    console.log( " Close cookie : " + erv.reopen_time );
+                    $.cookie('rv_ads_disable', 1, { expires: parseInt(erv.reopen_time) });
+                }
+            });
+
+    }); // end doc ready
+
+
+function reader_init() {
+
+     rv_zilla_likes_init();
+
+
+    $('a[data-fluidbox-readerview]').colorbox({
+            width: '80%', 
+            height: '80%',
+            close: false
+        });
+
+    $.colorbox.resize();
+    rv_change_fontsize( 0 );
+
+}
+function reader_install(){
+
+    console.log("Start");
+    readerviewstart = true;
+
+    rv_loading(1);
+
+    readerview.show();
+    $('html').addClass('no-scroll-body');
+    
+    // Hide Header on on scroll down
+    reader_view_hasScrolled();
+
+
+    
+
+    // Readerview Theme
+    var defaultTheme = readerview.data('defaulttheme');
+    var defaultFont = readerview.data('defaultfont');
+    var cookieRvTheme = $.cookie('readerview-theme');
+    var cookieRvFont = $.cookie('readerview-font');
+
+    
+    var cookiecurSizeTitle = $.cookie('readerview-font-title-size');
+
+    if ( cookieRvTheme == null )
+    {
+        $.cookie('readerview-theme', defaultTheme);
+    }
+
+    if ( cookieRvFont == null )
+    {
+        $.cookie('readerview-font', defaultFont);
+    }
+
+     if ( cookiecurSizeTitle != null )
+    {
+        $('#rv-post-title').css('font-size', cookiecurSizeTitle);
+    }
+
+    readerview.removeClass().addClass( $.cookie('readerview-theme') );
+    readerview.addClass( $.cookie('readerview-font') );
+
+    // Chose selected theme
+    $('.rv-theme-options a').removeClass('selected');
+    $('.rv-theme-options').find('a[data-theme="'+$.cookie('readerview-theme')+'"]').addClass('selected');
+
+    // Chose selected font
+    $('.rv-font-options a').removeClass('selected');
+    $('.rv-font-options').find('a[data-rvfont="'+$.cookie('readerview-font')+'"]').addClass('selected');
+
+    var cookieRvTheme = $.cookie('readerview-theme');
+    
+    $('#readerview-logo').css('backgorund-image','url(' + erv.light_logo_retina + ') no-repeat');
+    console.info("bg image : " + $('#readerview-logo'));
+    
+    if ( cookieRvTheme == 'rv-white-theme' ) $('#readerview-logo').css({'backgorund-image': erv.dark_logo_retina});
+    if ( cookieRvTheme == 'rv-dark-theme' ) $('#readerview-logo').css({'backgorund-image': erv.light_logo_retina});
+    if ( cookieRvTheme == 'rv-custom-theme' ) $('#readerview-logo').css({'backgorund-image': erv.custom_logo_retina});
+}
+
+function reader_getpost( post_id ){
+
+    var selected_post_id = readerview.attr('data-rvselectpostid');
+
+    if ( post_id == selected_post_id ) {
+        
+        rv_loading( 0 );
+
+        // Scroll top 0
+        readerview.stop().animate({scrollTop:0}, '1500', 'swing');
+        return false;
+    }
+
+    // Loading Effect Start
+    // $('#rv-body').css('opacity','0.3');
+    $('#rv-body').fadeTo( "slow", 0.33 );
+    
+    
+    // Get Post Detail
+    $.get(erv.ajax_url + '?action=erv_ajax_callback&mode=' + 'get_post_details', 'post_id='+post_id + '&selected_post_id='+selected_post_id, function(post){
+
+        setTimeout( function() {
+
+            if (post.ID < 1 ) {
+                console.log("Error1");
+                return false;
+            }
+            // Date
+            $('.rv-post-date').html(post.l_date);
+
+            // Post Title
+            $('.rv-post-title').html(post.post_title);
+            $('.rv-body-content').find('h1').first().html(post.post_title);
+
+            // Post Content
+            $('#readerview-one-content').html(post.post_content);
+
+            // Tags
+            $('.readerview-post-tags').html( post.tags );
+
+            // Relation Posts
+            if ( post.relation_posts != '' ) {
+
+                $('#rv-related-content').show();
+                $('ul.rv-related-posts').html( post.relation_posts );
+
+            } else {
+
+                $('#rv-related-content').hide();
+            }
+            // Next-Prev Post
+            $('span.post-prev').html('');
+            $('span.post-next').html('');
+
+            if ( post.previous_post )
+            {
+                $('span.post-prev').html(post.previous_post);
+            }
+            if ( post.next_post ){
+                $('span.post-next').html(post.next_post);    
+            }
+            
+            
+            // Comments
+            if ( post.comments != '' ) {
+                $('ul.rv-response-posts').html( post.comments );
+                $('#rv-response-content').show();
+            } else {
+
+                $('#rv-response-content').hide();
+            }
+            
+            // Comment All
+
+            $('.rv-show-all-comment').hide();
+            if ( post.comments_total_is_visible > 0 ) {
+                $('.rv-show-all-comment a').attr({
+                    href: post.l_comment
+                });
+
+                $('#readerview-comment-count').html(post.comments_total_is_visible);
+                $('.rv-show-all-comment').show();
+            }
+
+            // Author
+            $('#readerview-author').html(post.author);
+
+            // Zille Like
+            $('#readerview-like').html(post.l_like);
+
+            // Comment Link
+            $('.rv-comments').attr({href:post.l_comment});
+            // Post Link
+            var popover_html = "<a data-rvsocial='twitter' href='"+post.post_link+"'><i class='fa fa-twitter'></i></a><a data-rvsocial='facebook' href='"+post.post_link+"'><i class='fa fa-facebook'></i></a>";
+            $('#readerview-socials').html( popover_html );
+
+            // 
+            $('#readerview-one-content').find('a > img').each(function(index, el) {
+                
+                $(this).closest('a').attr({
+                    'data-fluidbox-readerview': 'data-fluidbox-readerview'
+                }).addClass('cboxElement');                 
+
+            });
+
+            // Logo Link
+            $('#readerview-logo').find('a').first().attr({"href":post.post_link});
+
+            // ReInit ReaderView
+            reader_init();
+
+            // Scroll top 0
+            readerview.stop().animate({scrollTop:0}, '1500', 'swing');
+
+             // Ads
+             if ( erv.ad_open_time > 0 ) {
+
+                setTimeout(function(){
+
+                    rv_ads_init();
+
+                }, erv.ad_open_time * 1000 );
+             }
+            
+            // Mobile Init
+            rv_mobil_init();
+
+            // Close Loading
+            if ( rv_loading_obj.is(':visible') )
+            {
+                rv_loading( 0 );
+            }
+
+            // $('#rv-body').css('opacity','1');
+            $('#rv-body').fadeTo( "slow", 1 );
+            
+            // Set Post ID
+            readerview.attr('data-rvselectpostid', post.ID);
+             
+        }, 1 );
+    
+    
+    }, 'json')
+    .fail(function (jqXHR) {
+        
+        // Log error
+        console.log(jqXHR);
+        
+        return false;
+    });
+
+}
+
+
+function rv_ads_init(){
+
+    if (erv.ad_show != 'Enable') return false;
+
+    var rv_ads_disable = $.cookie('rv_ads_disable');
+
+    if ( rv_ads_disable == 1 ) return false;
+
+    if ( rvad.is(':visible') ) return false;
+
+    rv_animate( rvad, 'animated ' + erv.ads_open_anim, 'open');
+    rvad.show();
+}
+
+// Scroll Up Down
+function reader_view_hasScrolled() {
+
+    if ( !readerviewstart ) return false;
+
+    var lastScrollTop = 0;
+       
+
+    readerview.scroll(function(event){
+
+        if ( $('.rv-options').is(':visible') ) {
+            $('.rv-options').toggle();    
+        }
+
+       var st = $(this).scrollTop();
+
+       $('#rv-header').removeClass('rv-header-up');
+       
+       if (st > lastScrollTop && st > navbarHeight){
+           // downscroll code
+           $('.rv-header-container').removeClass('is-visible');
+           $('.rv-bottom-container').removeClass('is-visible');
+           
+       } else {
+          // upscroll code
+           $('.rv-header-container').addClass('is-visible');
+           $('.rv-bottom-container').addClass('is-visible');
+       }
+
+            $('.rv-search-close').trigger('click');
+            if ( st < (navbarHeight + 10) ) {
+                
+                $('.rv-post-title').fadeOut('fast',function () {
+                   $('.rv-search-form').fadeOut('fast');
+                });
+
+           } else{
+                $('.rv-post-title').fadeIn();
+            }
+
+       lastScrollTop = st;
+    });
+}
+
+function rv_mobil_init() {
+
+        if ( $(window).width() > 768 ) {
+
+            $('#rv-body').removeClass('rv-body-mobile');
+            return false;
+        }
+
+        $('#rv-body').addClass('rv-body-mobile');
+
+        $('.rv-header-container').addClass('is-visible');
+        $('.rv-bottom-container').addClass('is-visible');
+
+        if ( !readerviewMyscroll ){
+             readerviewMyscroll = new IScroll('#rv-body', {
+                mouseWheel: true,
+                scrollbars: true,
+                click: true,
+                scrollX: false,
+                scrollY: true,
+            });
+        } else{
+
+            readerviewMyscroll.scrollTo(0, 50, 800, IScroll.utils.ease.quadratic);
+            // quadratic, circular, back, bounce, elastic
+        }
+        
+
+        $("div#scroller").bind('resizeScroller', function()
+        {
+            readerviewMyscroll.refresh();
+        })
+
+        $(document).on('click', function(event)
+        {
+            $("div#scroller").trigger('resizeScroller');
+        });
+
+        setTimeout(function(){$("div#scroller").trigger('resizeScroller');}, 3000);
+
+        $(window).resize(function()
+        {
+            $("div#scroller").trigger('resizeScroller');
+        });
+        
+        window.addEventListener("orientationchange", function()
+        {
+            $("div#scroller").trigger('resizeScroller');
+        }, false);
+}
+
+function rv_loading( rvVisible ){
+
+    if ( rvVisible == 1 )
+    {
+        $('#rv-header, #rv-body, #rv-footer, #scroller').hide();
+        rv_loading_obj.show();
+    }
+
+    if ( rvVisible == 0 ) {
+
+        $('#rv-header, #rv-body, #rv-footer, #scroller').show();
+        rv_loading_obj.hide();
+    }
+}
+
+function rv_change_fontsize( c_fontsize ) {
+
+    if ( c_fontsize < 1 ) {
+
+        var cookiecurSize = $.cookie('readerview-font-size');
+        c_fontsize = cookiecurSize;
+
+    }
+
+    $('#readerview-one-content').find('h1,h2,h3,h4,h5,p,div,a,span').add('#readerview-one-content').css('font-size', parseInt(c_fontsize));
+}
+
+
+function rv_zilla_likes_init() {
+    // Init Zille Likes
+    var rv_zille_likes = $('#readerview-like').find('.zilla-likes').first();
+
+    if (rv_zille_likes.length > 0) {
+
+        rv_zille_likes.removeClass('fa fa-heart fa-heart-o');
+
+        if ( rv_zille_likes.hasClass('active') ) {
+
+            rv_zille_likes.addClass('fa fa-heart');
+
+        } else {
+            rv_zille_likes.addClass('fa fa-heart-o');
+        }
+
+    }
+}
+function rv_animate ( obj, anim, actionType ) {
+            
+    obj.addClass(anim);
+
+    obj.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        obj.removeClass(anim);
+        if ( actionType == 'hide') {
+            obj.hide();
+        }
+    });
+}
+
+function rv_PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+
+} (window.jQuery || window.Zepto));

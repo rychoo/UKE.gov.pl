@@ -1,0 +1,38 @@
+IP Addresses,MAC Addresses,Manufacturers,Trusted,Alias,DNS Names,NetBios Names,SSDP Manufacturers,SSDP Models,SSDP Names,SSDP UDNs,SNMP Names,mDNS Services,HTTP Servers,Ping (AVG)
+"[""172.31.0.30"",""172.31.0.22""]","[""08:00:27:91:38:da"",""08:00:27:d6:ea:1e""]",PCS Systemtechnik GmbH,false,,,DESKTOP-NDABFST,,,,,,,,
+172.31.0.41,68:05:ca:17:45:9b,Intel Corporate,false,,,SYMFONIA,,,,,,,,
+172.31.0.49,24:5e:be:61:01:2c,"QNAP Systems, Inc.",false,,,NAS-ZAWOJA,,,,,,"_workstation._tcp (port 9, name: NAS-ZAWOJA)",,
+172.31.0.80,00:e0:4c:36:0b:1a,REALTEK SEMICONDUCTOR CORP.,false,,,,,,,,,,,
+172.31.0.81,20:47:47:84:32:a2,Dell Inc.,false,,,WIN-5U1176CS0GH,,,,,,,,31.979274
+172.31.0.85,00:25:ab:90:a0:3c,AIO LCD PC BU / TPV,false,,,DESKTOP-2TO9OQ9,,,,,,,,101.81251
+172.31.0.100,00:0b:82:9a:6b:cc,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),
+172.31.0.101,00:0b:82:9a:6b:ce,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),8.452761
+172.31.0.102,00:0b:82:9a:6b:ca,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),7.04948
+172.31.0.103,00:0b:82:9a:6b:cb,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),41.6924
+172.31.0.104,00:0b:82:9a:6b:d0,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),68.840424
+172.31.0.105,00:0b:82:9a:6b:d6,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),
+172.31.0.106,00:0b:82:9a:6b:cf,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),6.574011
+172.31.0.107,00:0b:82:dd:97:48,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),31.563389
+172.31.0.108,00:0b:82:9a:6b:cd,"Grandstream Networks, Inc.",false,,,,,,,,,,Loading Web Application (mini_httpd/1.30 26Oct2018),56.738547
+172.31.1.1,,,false,,,,,,,,,,,68.682351
+172.31.1.2,60:e3:27:50:db:5b,"TP-LINK TECHNOLOGIES CO.,LTD.",false,,,,,,,,,,Loading... (Web Switch),228.720284
+172.31.1.3,,,false,,,,,,,,,,,
+172.31.1.4,00:0b:82:a2:cf:ea,"Grandstream Networks, Inc.",false,,,,,,,,,,400 Bad Request (lighttpd/1.4.55),9.532605
+172.31.1.6,,,false,,,,,,,,,,,
+"[""172.31.1.10"",""172.31.1.20""]","[""00:08:9b:cb:50:bd"",""00:08:9b:cb:50:bc""]","[""ICP Electronics Inc."",""Fujitsu Technology Solutions GmbH""]",false,,,NAS-IPC,Fujitsu Technology Solutions GmbH,Q800,NAS-IPC,356da505-0570-4d47-8f8e-530f001d0244,,"_workstation._tcp (port 9, name: NAS-IPC)",400 Bad Request (Apache),
+172.31.1.12,cc:08:fa:a7:e7:78,"Apple, Inc.",false,,,MAC-A7E778,,,,,,,,
+172.31.1.13,c8:15:4e:3b:53:30,Intel Corporate,false,,,,,,,,,,,
+172.31.1.19,,,false,,,,,,,,,,,
+172.31.1.22,,,false,,,,,,,,,,,
+172.31.1.25,,HUAWEI,false,,,,HUAWEI,ATU-L21,,aaea4b03-51e5-5e8e-0000-018e5fe68d55,,,,0.563594
+172.31.1.28,6c:2b:59:c9:57:5f,Dell Inc.,false,,,B214YY2,,,,,,,,57.333235
+172.31.1.29,30:89:4a:1a:46:45,Intel Corporate,false,,,DELL_LATITUDE,,,,,,,,
+172.31.1.31,0c:8b:fd:68:f7:77,Intel Corporate,false,,,GIZMO,,,,,,,,
+172.31.1.109,80:38:96:ca:f8:96,SHARP Corporation,false,,,,,,,,SHARP MX-2630N,,,6.160521
+172.31.1.121,8c:55:4a:24:17:6f,Intel Corporate,false,,,DESKTOP-3VL2LS5,,,,,,,,
+172.31.1.220,fc:b6:9d:0c:5c:21,"Zhejiang Dahua Technology Co., Ltd.",false,,,,,,,,,,,
+172.31.1.225,00:46:b8:02:d0:0c,,false,,,,,IPCamera,IPCamera - umksmtwbfiu9,Upnp-IPCamera-umksmtwbfiu9,,,,
+172.31.1.254,,,false,,lms.local,,,,,,,,400 Bad Request (Apache/2.4.59 (Debian)),101.380635
+172.31.3.101,18:fd:74:db:b1:c5,Routerboard.com,false,,,,,,,,,,,
+172.31.3.102,00:0c:42:a2:df:a4,Routerboard.com,false,,,,,,,,,,,
+fe80::78d5:80ff:fed2:58b0,,,false,,,,,,,,,,,
